@@ -1,5 +1,15 @@
 .products{
 
-    display: flex;
-    justify-content: space-evenly;
+    height: 100%;
+
+    &__info{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 10%;
+        height: 100%;
+
+        
+    }
+
+    
 }

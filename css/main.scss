@@ -5,6 +5,19 @@
 body {
     margin: 0;
 }
+
+.subtitle{
+
+    text-align: center;
+    color: #003548;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 104px;
+    margin-bottom: 0;
+
+
+}
  
 @import './menu';
 @import './banner';

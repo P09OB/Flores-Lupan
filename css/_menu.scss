@@ -1,6 +1,7 @@
 .menu {
+  background-color: #04171E;
+
   color: white;
-  margin-top: 24px;
   display: flex;
   position: fixed;
   width: 100%;
@@ -11,7 +12,9 @@
   letter-spacing: 0.02em;
   
   &__nav {
+    background-color: #04171E;
     width: 100%;
+    margin-top: 10px;
     display: flex;
 
     &__list{
