@@ -5,8 +5,21 @@
     &__info{
         display: flex;
         justify-content: space-evenly;
-        margin-top: 10%;
+        margin-top: 68px;
+        margin-bottom: 111px;
         height: 100%;
+
+        &__ramo{
+
+            display: flex;
+            justify-content: space-between;
+            color: #003548;
+            font-family: 'Merriweather', serif;
+            font-weight: bold;
+            font-size: 15px;
+            margin-top: 0;
+
+        }
 
         
     }
