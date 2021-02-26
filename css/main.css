@@ -80,8 +80,6 @@ body {
 
 .banner__ad__p {
   font-family: Raleway;
-  font-style: normal;
-  font-weight: normal;
   font-size: 18px;
   line-height: 129%;
   margin-bottom: 34px;
@@ -129,10 +127,6 @@ body {
   margin-top: 0;
 }
 
-.ad {
-  position: relative;
-}
-
 .ad__info {
   position: absolute;
   width: 30%;
@@ -142,5 +136,77 @@ body {
   color: #003548;
   font-weight: 600;
   font-size: 26px;
+}
+
+.ad__button {
+  position: absolute;
+  margin-top: 12%;
+  margin-left: 60%;
+  width: 140px;
+  height: 22px;
+  border-radius: 16px;
+  text-align: center;
+  padding: 10px;
+  background-color: #CFA24F;
+  color: white;
+}
+
+.footer {
+  background-color: #04171E;
+}
+
+.footer__list {
+  color: white;
+}
+
+.feature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #04171E;
+  color: white;
+  width: 100%;
+  height: 193px;
+  padding-left: 120px;
+  padding-right: 80px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.feature__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 52px;
+  padding-bottom: 60px;
+  width: 100%;
+}
+
+.feature__info__text {
+  width: 60%;
+  margin: 0;
+  font-family: Raleway;
+  font-size: 18px;
+  line-height: 129%;
+  margin-left: 20px;
+}
+
+.newsletter {
+  background-color: #E6E7E9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.newsletter__input {
+  margin-top: 62px;
+  margin-left: 165px;
 }
 /*# sourceMappingURL=main.css.map */
