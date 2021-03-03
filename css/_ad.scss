@@ -1,6 +1,8 @@
 .ad{
 
     position: relative;
+    background-color: white;
+margin-bottom: 0;
 
     &__info{
 
@@ -10,7 +12,6 @@
         margin-left: 60%;
         font-family: Raleway;
         color: #003548;
-
         font-weight: 600;
         font-size: 26px;
 
@@ -28,5 +29,9 @@
         padding: 10px;
         background-color: #CFA24F;
         color: white ;
+    }
+
+    &__img{
+        width: 100%;
     }
 }

@@ -1,35 +1,59 @@
 .menu {
   background-color: #04171E;
-
   color: white;
-  display: flex;
   position: fixed;
   width: 100%;
   font-family: 'Raleway', sans-serif;
   font-weight: 500;
   font-size: 16px;
-  line-height: 91.5%;
-  letter-spacing: 0.02em;
+  z-index: 5;
+  padding-top: 10px;
   
-  &__nav {
-    background-color: #04171E;
-    width: 100%;
-    margin-top: 10px;
+  &__list{
     display: flex;
+    width: 100%;
+    list-style: none;
+    justify-content: space-evenly;   
+    align-items: center;
 
-    &__list{
-      display: flex;
-      width: 100%;
-      list-style: none;
-      justify-content: space-evenly;   
-      align-items: center;
-
+    @media (max-width: 600px) {
+  
+      flex-direction: column;
+      align-items: flex-start;      
     }
-
 
   }
 
+  &__element{
+    display: inline-block;
+
+  }
+
+  &__element:hover{
+
+    color: #CFA24F;
+    font-weight: 600;
+    justify-content: space-evenly;   
+
   
+  }
+
+  &--icono{
+    margin-right: 20px;
+  }
+
+  &--icono:hover{
+    background-color: #CFA24F;
+    border-radius: 30px;
+    padding: 6px;
+    box-sizing: border-box;
+    
+  }
+
+  &__button{
+    display: none;
+
+  }
 
 
 

@@ -4,6 +4,7 @@
 
 body {
     margin: 0;
+    background-color: #04171E;
 }
 
 .subtitle{
@@ -17,6 +18,18 @@ body {
     margin-bottom: 0;
 
 
+}
+
+.img{
+    margin: 0;
+    width: 100%;
+}
+header{
+    margin: 0
+}
+
+section{
+    margin: 0;
 }
  
 @import './menu';

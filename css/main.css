@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap");
 body {
   margin: 0;
+  background-color: #04171E;
 }
 
 .subtitle {
@@ -15,31 +16,32 @@ body {
   margin-bottom: 0;
 }
 
+.img {
+  margin: 0;
+  width: 100%;
+}
+
+header {
+  margin: 0;
+}
+
+section {
+  margin: 0;
+}
+
 .menu {
   background-color: #04171E;
   color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   position: fixed;
   width: 100%;
   font-family: 'Raleway', sans-serif;
   font-weight: 500;
   font-size: 16px;
-  line-height: 91.5%;
-  letter-spacing: 0.02em;
+  z-index: 5;
+  padding-top: 10px;
 }
 
-.menu__nav {
-  background-color: #04171E;
-  width: 100%;
-  margin-top: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.menu__nav__list {
+.menu__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -53,32 +55,68 @@ body {
           align-items: center;
 }
 
-.banner {
-  position: relative;
+@media (max-width: 600px) {
+  .menu__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 
-.banner__ad {
+.menu__element {
+  display: inline-block;
+}
+
+.menu__element:hover {
+  color: #CFA24F;
+  font-weight: 600;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.menu--icono {
+  margin-right: 20px;
+}
+
+.menu--icono:hover {
+  background-color: #CFA24F;
+  border-radius: 30px;
+  padding: 6px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.menu__button {
+  display: none;
+}
+
+.banner {
   margin-top: 18%;
   margin-left: 7%;
   color: white;
   position: absolute;
 }
 
-.banner__ad--title {
+.banner__title {
   font-family: 'Merriweather', serif;
   font-weight: bold;
   font-size: 60px;
   margin-bottom: 0;
 }
 
-.banner__ad--subtitle {
+.banner__subtitle {
   font-family: 'Merriweather', serif;
   font-weight: bold;
   font-size: 30px;
   margin-top: 0;
 }
 
-.banner__ad--p {
+.banner__p {
   font-family: Raleway;
   font-size: 18px;
   line-height: 129%;
@@ -86,7 +124,7 @@ body {
   width: 65%;
 }
 
-.banner__ad--button {
+.banner__button {
   background-color: #CFA24F;
   width: 100%;
   height: 42px;
@@ -97,8 +135,13 @@ body {
           box-sizing: border-box;
 }
 
+.banner__button:hover {
+  background-color: #a0998c;
+}
+
 .products {
   height: 100%;
+  background-color: white;
 }
 
 .products__info {
@@ -129,6 +172,8 @@ body {
 
 .ad {
   position: relative;
+  background-color: white;
+  margin-bottom: 0;
 }
 
 .ad__info {
@@ -155,12 +200,24 @@ body {
   color: white;
 }
 
+.ad__img {
+  width: 100%;
+}
+
 .footer {
   background-color: #04171E;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
 }
 
 .footer__list {
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
 }
 
 .feature {
@@ -191,9 +248,10 @@ body {
   padding-top: 52px;
   padding-bottom: 60px;
   width: 100%;
+  margin: 0;
 }
 
-.feature__info__text {
+.feature__text {
   width: 60%;
   margin: 0;
   font-family: Raleway;
@@ -208,6 +266,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   color: #003548;
+  margin-top: 0;
 }
 
 .newsletter__input {
