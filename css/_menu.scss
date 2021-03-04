@@ -1,59 +1,39 @@
 .menu {
   background-color: #04171E;
-  color: white;
-  position: fixed;
-  width: 100%;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  z-index: 5;
-  padding-top: 10px;
-  
-  &__list{
+    color: white;
     display: flex;
-    width: 100%;
-    list-style: none;
+    position: sticky;
+    top: 0;
     justify-content: space-evenly;   
     align-items: center;
+    padding-top: 24px;
+    padding-bottom: 20px;  
+    
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
 
-    @media (max-width: 600px) {
-  
-      flex-direction: column;
-      align-items: flex-start;      
+    width: 100%;
+
+    &__element:hover{
+
+        color: #CFA24F;
+        justify-content: space-evenly; 
+        //font-weight: 600;
     }
 
-  }
+    &--icono{
+        margin-right: 20px;
+    }
 
-  &__element{
-    display: inline-block;
+    @media (max-width: 600px) {
 
-  }
+        flex-direction: column;
+        align-items: flex-start;
 
-  &__element:hover{
-
-    color: #CFA24F;
-    font-weight: 600;
-    justify-content: space-evenly;   
-
-  
-  }
-
-  &--icono{
-    margin-right: 20px;
-  }
-
-  &--icono:hover{
-    background-color: #CFA24F;
-    border-radius: 30px;
-    padding: 6px;
-    box-sizing: border-box;
-    
-  }
-
-  &__button{
-    display: none;
-
-  }
+        
+        
+    }
 
 
 

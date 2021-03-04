@@ -1,9 +1,12 @@
 .banner{
 
-        margin-top: 18%;
-        margin-left: 7%;
-        color: white;
-        position: absolute;
+    width: 100%;
+    height: 700px;
+    color: white;
+    background-image: url('/imag/fondo.jpg');
+    padding-top: 211px;
+    padding-left: 120px;
+    box-sizing: border-box;
 
         &__title{
 
@@ -21,38 +24,21 @@
             font-size: 30px;
             margin-top: 0;
 
+
         }
 
         &__p{
 
             font-family: Raleway;
-
             font-size: 18px;
             line-height: 129%;
-            margin-bottom: 34px;
-
-            width: 65%;
-
+            padding-top: 30px;
+            width: 24%;
         }
 
-        &__button{
-            background-color: #CFA24F;
-            width: 100%;
-            height: 42px;
-            margin-top: 900px;
-            border-radius: 16px;
-            padding: 10px;
-            box-sizing: border-box; 
-        }
 
-        &__button:hover{
-            background-color: #a0998c;
-            
 
-        }
-
-        
-
+ 
 }
 
     

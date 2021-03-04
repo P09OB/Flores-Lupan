@@ -12,40 +12,30 @@
 
 <body>
 
-    <section class="banner">
+    <nav class="menu">
 
+        <a class="menu__element">Inicio</a>
+        <a class="menu__element">Flores</a>
+        <a class="menu__element" >Ramos</a>
+        <a class="menu__logo"> <img src="./imag/logo.png"></a>
+        <a class="menu__element">Galería</a>
+        <a class="menu__element"> Contáctenos</a>
+        <div class="menu__icono">
+            <a><img class="menu--icono" src="./imag/ShoppingCart.png">
+            </a><a><img class="menu--icono" src="./imag/User.png">
+            </a>
+        </div>
+        
+
+    </nav>
+
+    <section class="banner">
         <h1 class="banner__title">Flores frescas</h1>
         <h2 class="banner__subtitle">para toda ocasión</h2>
         <p class="banner__p">Lupan flores te ofrece una variedad de ramos en un solo lúgar</p>
-        <a class="banner__button">Ver ramos</a>
-
+        <button type = "button" class="button" >Ver ramos</button>
+        <div class="banner__img" ></div>
     </section>
-
-    <header>
-
-        <nav class="menu">
-
-            <ul class="menu__list">
-                <button class="menu__button">Menu</button>
-                <li class="menu__element">Inicio</li>
-                <li class="menu__element">Flores</li>
-                <li class="menu__element">Ramos</li>
-                <li class="menu__logo"><img src="./imag/logo.png"></li>
-                <li class="menu__element">Galería</li>
-                <li class="menu__element">Contáctenos</li>
-                <li class="menu__element">
-                    <div class="menu__icono">
-                        <img class="menu--icono" src="./imag/ShoppingCart.png">
-                        <img class="menu--icono" src="./imag/User.png">
-                    </div>
-                </li>
-            </ul>
-
-        </nav>
-
-    </header>
-
-    <img class="img" src="imag/fondo.jpg">
 
     <section class="feature">
         <div class="feature__info">
@@ -76,6 +66,7 @@
 
         <div class="feature__info">
             <img src="./imag/relojIcono.png">
+
             <div class="feature__text">
 
                 <h3>Frescura que perdura</h3>
@@ -90,9 +81,11 @@
 
     </section>
 
+    
+
 
     <section class="products">
-        <h1 class="subtitle">Productos destacados</h1>
+        <h1 class="products__subtitle">Productos destacados</h1>
 
         <div class="products__info">
 

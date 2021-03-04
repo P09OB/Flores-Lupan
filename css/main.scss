@@ -1,41 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
 
 body {
-    margin: 0;
-    background-color: #04171E;
+    background-color: white;
 }
 
-.subtitle{
+p{
+    padding-top: 10px;
 
-    text-align: center;
-    color: #003548;
-    font-family: 'Merriweather', serif;
-    font-weight: bold;
-    font-size: 35px;
-    margin-top: 104px;
-    margin-bottom: 0;
-
-
-}
-
-.img{
-    margin: 0;
-    width: 100%;
-}
-header{
-    margin: 0
-}
-
-section{
-    margin: 0;
 }
  
-@import './menu';
-@import './banner';
+
 @import './products';
 @import './ad';
 @import './footer';
-@import './feature';
 @import './newsletter';
+
+
+@import './menu';
+@import './banner';
+@import './feature';
+
+  
+@import './button'

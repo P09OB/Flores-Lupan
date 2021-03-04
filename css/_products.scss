@@ -2,13 +2,22 @@
 
     height: 100%;
     background-color: white;
+    padding-top: 40px;
+    box-sizing: border-box;
 
     &__info{
         display: flex;
         justify-content: space-evenly;
         margin-top: 68px;
-        margin-bottom: 111px;
+        padding-bottom: 111px;
+        box-sizing: border-box;
         height: 100%;
+
+        @media (max-width: 600px) {
+
+            display: inline-block;
+                
+        }
 
         &__ramo{
 
@@ -20,9 +29,25 @@
             font-size: 15px;
             margin-top: 0;
 
+            
+
+
         }
 
         
+    }
+
+    &__subtitle{
+
+        text-align: center;
+        color: #003548;
+        margin-top: 80px;
+        font-family: 'Merriweather', serif;
+        font-weight: bold;
+        font-size: 35px;
+        margin-bottom: 0;
+    
+    
     }
 
     
