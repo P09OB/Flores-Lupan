@@ -2,14 +2,15 @@
 
     height: 100%;
     background-color: white;
-    padding-top: 40px;
+    padding-top: 120px;
     box-sizing: border-box;
+    padding-bottom: 111px;
+
 
     &__info{
         display: flex;
         justify-content: space-evenly;
         margin-top: 68px;
-        padding-bottom: 111px;
         box-sizing: border-box;
         height: 100%;
 
@@ -37,18 +38,6 @@
         
     }
 
-    &__subtitle{
-
-        text-align: center;
-        color: #003548;
-        margin-top: 80px;
-        font-family: 'Merriweather', serif;
-        font-weight: bold;
-        font-size: 35px;
-        margin-bottom: 0;
-    
-    
-    }
 
     
 }

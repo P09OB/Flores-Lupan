@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: white;
+    background-color: rgb(233, 17, 17);
 }
 
 p{
@@ -29,4 +29,6 @@ p{
 @import './feature';
 
   
-@import './button'
+@import './button';
+@import './input';
+@import './title';

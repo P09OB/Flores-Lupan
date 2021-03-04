@@ -1,15 +1,13 @@
 .ad{
 
-    position: relative;
-    background-color: white;
-margin-bottom: 0;
+    background-image: url("/imag/adFlowers.png");
+    height: 261px;
+    
 
     &__info{
 
-        position: absolute;
         width: 30%;
-        margin-top: 6%;
-        margin-left: 60%;
+        padding: 80px 0 0 60%;
         font-family: Raleway;
         color: #003548;
         font-weight: 600;
@@ -18,20 +16,5 @@ margin-bottom: 0;
 
     }
 
-    &__button{
-        position: absolute;
-        margin-top: 12%;
-        margin-left: 60%;
-        width: 140px;
-        height: 22px;
-        border-radius: 16px;
-        text-align: center;
-        padding: 10px;
-        background-color: #CFA24F;
-        color: white ;
-    }
-
-    &__img{
-        width: 100%;
-    }
+    
 }

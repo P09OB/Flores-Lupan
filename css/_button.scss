@@ -1,12 +1,24 @@
 .button{
 
     font-family: 'Poppins';
-    background-color: #CFA24F;
-    color: white;
     width: 179px;
     height: 42px;
+    background-color: #CFA24F;
+    font-weight: 500;
+    font-size: 18px;
+    color: white;
     margin-top: 28px;
     border-radius: 16px;
     border: none;
+
+    &__ad{
+        margin-left: 60%;
+
+    }
+
+    
+
+    
+
 
 }
