@@ -1,13 +1,15 @@
 .products{
 
     height: 100%;
-    background-color: white;
     padding-top: 120px;
     box-sizing: border-box;
     padding-bottom: 111px;
+    color: #003548;
 
 
-    &__info{
+
+
+    &__ramo{
         display: flex;
         justify-content: space-evenly;
         margin-top: 68px;
@@ -17,26 +19,53 @@
         @media (max-width: 600px) {
 
             display: inline-block;
+
                 
-        }
-
-        &__ramo{
-
-            display: flex;
-            justify-content: space-between;
-            color: #003548;
-            font-family: 'Merriweather', serif;
-            font-weight: bold;
-            font-size: 15px;
-            margin-top: 0;
-
-            
-
-
-        }
-
-        
+        } 
     }
+
+    &__price{
+
+        display: flex;
+        justify-content: space-between;
+        font-family: 'Merriweather', serif;
+        font-weight: bold;
+        font-size: 15px;
+        padding-top: 17px;
+
+
+    }
+
+    &__info{
+
+        display:inline-block;
+        position:relative;
+        width: 313px;
+
+        &--img:hover{
+            opacity: 0.10;
+            transition: opacity 500ms;
+        
+    
+        }
+    }
+
+    &__feature{
+
+        width: 275px;
+        position:absolute;
+        z-index: -1;
+        top:0;
+        left:0;
+        padding:10px;
+        margin:0;
+        border-style:solid;
+        border-color:#003548 ;
+        border-width: 1px;
+    }
+    
+
+    
 
 
     
