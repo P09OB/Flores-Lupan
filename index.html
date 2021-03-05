@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flores Lupan</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="/path/to/flickity.css" media="screen">
+
 
 </head>
 
@@ -14,14 +16,14 @@
 
     <nav class="menu">
         <div class="menu__responsive">
-            <img src="imag/menu.png" id="button" class="menu__button" >
-            <img class="menu__logo--size"src="./imag/logo-41w.png">
+            <img src="imag/menu.png" id="button" class="menu__button">
+            <img class="menu__logo--size" src="./imag/logo-41w.png">
             <a><img class="menu--icono" src="./imag/ShoppingCart.png">
             </a><a><img class="menu--icono" src="./imag/User.png">
             </a>
 
         </div>
-        
+
         <a class="menu__element menu__desaparecer">Inicio</a>
         <a class="menu__element menu__desaparecer">Flores</a>
         <a class="menu__element menu__desaparecer">Ramos</a>
@@ -99,14 +101,14 @@
 
                     <div class="products__feature">
 
-                        <h2 class="products__feature--title" >Rapsodias</h2>
+                        <h2 class="products__feature--title">Rapsodias</h2>
                         <h4 class="products__feature--subt">Mide</h4>
                         <p class="products__feature--p">14 "de alto x 15" de ancho.</p>
                         <h4 class="products__feature--subt">Contiene</h4>
                         <ol class="products__feature--p">
                             <ul>- Clavel</li>
-                            <ul>- Lirio peruano</li>
-                            <ul>- Rosa</li>
+                                <ul>- Lirio peruano</li>
+                                    <ul>- Rosa</li>
                         </ol>
                         <button class="button button__product">Conocer más</button>
 
@@ -131,14 +133,14 @@
 
                     <div class="products__feature">
 
-                        <h2 class="products__feature--title" >Asusena</h2>
+                        <h2 class="products__feature--title">Asusena</h2>
                         <h4 class="products__feature--subt">Mide</h4>
                         <p class="products__feature--p">14 "de alto x 15" de ancho.</p>
                         <h4 class="products__feature--subt">Contiene</h4>
                         <ol class="products__feature--p">
                             <ul>- Clavel</li>
-                            <ul>- Lirio peruano</li>
-                            <ul>- Rosa</li>
+                                <ul>- Lirio peruano</li>
+                                    <ul>- Rosa</li>
                         </ol>
                         <button class="button button__product">Conocer más</button>
 
@@ -164,14 +166,14 @@
 
                     <div class="products__feature">
 
-                        <h2 class="products__feature--title"class="products__feature--title">Primavera</h2>
+                        <h2 class="products__feature--title" class="products__feature--title">Primavera</h2>
                         <h4 class="products__feature--subt">Mide</h4>
                         <p class="products__feature--p">14 "de alto x 15" de ancho.</p>
                         <h4 class="products__feature--subt">Contiene</h4>
                         <ol class="products__feature--p">
                             <ul>- Clavel</li>
-                            <ul>- Lirio peruano</li>
-                            <ul>- Rosa</li>
+                                <ul>- Lirio peruano</li>
+                                    <ul>- Rosa</li>
                         </ol>
                         <button class="button button__product">Conocer más</button>
 
@@ -200,7 +202,15 @@
         <button type="button" class="button button__ad">Comprar ahora</button>
 
     </section>
-    <!-- PARTE ANTIGUA -->
+
+    <div class="gallery js-flickity" data-flickity-options='{ "freeScroll": true, "wrapAround": true }'>
+        <div class="gallery-cell gallery-pictureone"></div>
+        <div class="gallery-cell gallery-picturetwo"></div>
+        <div class="gallery-cell gallery-picturethree"></div>
+        <div class="gallery-cell gallery-picturefour"></div>
+        <div class="gallery-cell gallery-picturefive"></div>
+    </div>
+
     <section class="newsletter">
 
         <div class="newsletter__img"></div>
@@ -217,6 +227,7 @@
 
         </div>
     </section>
+
 
 </body>
 
@@ -266,8 +277,6 @@
 
 
 
-</footer>
-
 </html>
-
-<script src="/Js/main.js"></script>
+<script src="/path/to/flickity.pkgd.min.js"></script>
+<script src="/scripts/main.js"></script>

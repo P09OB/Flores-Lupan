@@ -340,6 +340,47 @@ p {
   }
 }
 
+.gallery {
+  background: #003548;
+  padding-top: 10px;
+}
+
+.gallery-cell {
+  width: 30%;
+  height: 350px;
+  margin-right: 10px;
+  counter-increment: gallery-cell;
+}
+
+.gallery-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: transparent;
+}
+
+.gallery-pictureone {
+  background-image: url(/imag/gallery1.png);
+}
+
+.gallery-picturetwo {
+  background-image: url(/imag/gallery2.jpg);
+}
+
+.gallery-picturethree {
+  background-image: url(/imag/gallery3.png);
+}
+
+.gallery-picturefour {
+  background-image: url(/imag/gallery4.png);
+}
+
+.gallery-picturefive {
+  background-image: url(/imag/gallery5.png);
+}
+
 .button {
   font-family: 'Poppins';
   width: 179px;
