@@ -13,13 +13,21 @@
 <body>
 
     <nav class="menu">
+        <div class="menu__responsive">
+            <img src="imag/menu.png" id="button" class="menu__button" >
+            <img class="menu__logo--size"src="./imag/logo-41w.png">
+            <a><img class="menu--icono" src="./imag/ShoppingCart.png">
+            </a><a><img class="menu--icono" src="./imag/User.png">
+            </a>
 
-        <a class="menu__element">Inicio</a>
-        <a class="menu__element">Flores</a>
-        <a class="menu__element">Ramos</a>
+        </div>
+        
+        <a class="menu__element menu__desaparecer">Inicio</a>
+        <a class="menu__element menu__desaparecer">Flores</a>
+        <a class="menu__element menu__desaparecer">Ramos</a>
         <a class="menu__logo"> <img src="./imag/logo.png"></a>
-        <a class="menu__element">Galería</a>
-        <a class="menu__element"> Contáctenos</a>
+        <a class="menu__element menu__desaparecer">Galería</a>
+        <a class="menu__element menu__desaparecer"> Contáctenos</a>
         <div class="menu__icono">
             <a><img class="menu--icono" src="./imag/ShoppingCart.png">
             </a><a><img class="menu--icono" src="./imag/User.png">
@@ -80,7 +88,7 @@
 
 
     </section>
-    
+
     <section class="products">
         <h1 class="title">Productos destacados</h1>
         <div class="products__ramo">
@@ -91,16 +99,16 @@
 
                     <div class="products__feature">
 
-                        <h2>Rapsodias</h2>
-                        <h4>Mide</h4>
-                        <p>14 "de alto x 15" de ancho.</p>
-                        <h4>Contiene</h4>
-                        <ol>
+                        <h2 class="products__feature--title" >Rapsodias</h2>
+                        <h4 class="products__feature--subt">Mide</h4>
+                        <p class="products__feature--p">14 "de alto x 15" de ancho.</p>
+                        <h4 class="products__feature--subt">Contiene</h4>
+                        <ol class="products__feature--p">
                             <ul>- Clavel</li>
                             <ul>- Lirio peruano</li>
                             <ul>- Rosa</li>
                         </ol>
-                        <button>Leer más</button>
+                        <button class="button button__product">Conocer más</button>
 
                     </div>
 
@@ -123,16 +131,16 @@
 
                     <div class="products__feature">
 
-                        <h2>Asusena</h2>
-                        <h4>Mide</h4>
-                        <p>14 "de alto x 15" de ancho.</p>
-                        <h4>Contiene</h4>
-                        <ol>
+                        <h2 class="products__feature--title" >Asusena</h2>
+                        <h4 class="products__feature--subt">Mide</h4>
+                        <p class="products__feature--p">14 "de alto x 15" de ancho.</p>
+                        <h4 class="products__feature--subt">Contiene</h4>
+                        <ol class="products__feature--p">
                             <ul>- Clavel</li>
                             <ul>- Lirio peruano</li>
                             <ul>- Rosa</li>
                         </ol>
-                        <button>Leer más</button>
+                        <button class="button button__product">Conocer más</button>
 
                     </div>
 
@@ -156,16 +164,16 @@
 
                     <div class="products__feature">
 
-                        <h2>Primavera</h2>
-                        <h4>Mide</h4>
-                        <p>14 "de alto x 15" de ancho.</p>
-                        <h4>Contiene</h4>
-                        <ol>
+                        <h2 class="products__feature--title"class="products__feature--title">Primavera</h2>
+                        <h4 class="products__feature--subt">Mide</h4>
+                        <p class="products__feature--p">14 "de alto x 15" de ancho.</p>
+                        <h4 class="products__feature--subt">Contiene</h4>
+                        <ol class="products__feature--p">
                             <ul>- Clavel</li>
                             <ul>- Lirio peruano</li>
                             <ul>- Rosa</li>
                         </ol>
-                        <button>Leer más</button>
+                        <button class="button button__product">Conocer más</button>
 
                     </div>
 
@@ -186,7 +194,6 @@
 
         </div>
     </section>
-    <!-- PARTE ANTIGUA -->
     <section class="ad">
 
         <p class="ad__info">Adquiere una tarjeta de regalo y obtén el <b>35%</b> de descuento</p>
@@ -195,27 +202,23 @@
     </section>
     <!-- PARTE ANTIGUA -->
     <section class="newsletter">
-        <img class="newsletter__img" src='./imag/newsletter.jpg'>
+
+        <div class="newsletter__img"></div>
+        
 
         <div class="newsletter__input">
 
             <h1 class="title">Boletín y ofertas</h1>
             <p class="input__p">Suscribete y reciba ofertas exclusivas:</p>
             <input class="input input__text" type="text" placeholder="Nombre">
-            <br><input class="input input__text" type="text" placeholder="Correo electronico"></br>
+            <input class="input input__text" type="text" placeholder="Correo electronico"></br>
             <button class="button"> Suscribirse</button>
-            </br>
+            
 
         </div>
-
-
-
-
-
     </section>
 
 </body>
-
 
 <footer>
 
@@ -266,3 +269,5 @@
 </footer>
 
 </html>
+
+<script src="/Js/main.js"></script>
