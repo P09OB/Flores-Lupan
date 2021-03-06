@@ -19,11 +19,6 @@
       display: flex;
       align-items: center;
 
-      @media (max-width: 700px) {
-
-          width: 50%;
-          
-      }
   }
 
   &__text{
@@ -32,18 +27,51 @@
       padding-left: 25px;
       box-sizing: border-box; 
 
-      @media (max-width: 700px) {
-
-        width: 100%;
-        
-    }
-
       
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 986px) {
 
       flex-direction: column;
+      width: 100%;
       
+
+
+
+      &__info{
+
+        width: 100%;
+        flex-direction: column;
+        margin-left: 0;
+
+      }
+
+      &__text{
+
+        width: 34%;
+        text-align: center;
+        padding-left: 0;
+        padding-top: 20px;
+        padding-bottom: 40px;
+
+
+
+      }
   }
+
+  @media (max-width: 400px) {
+
+    &__text{
+
+      width: 65%;
+      
+
+
+
+    }
+
+
+  }
+
+  
 }

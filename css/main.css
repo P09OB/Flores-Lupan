@@ -40,6 +40,9 @@ p {
 @media (max-width: 700px) {
   .products__ramo {
     display: inline-block;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -212,7 +215,7 @@ p {
   margin-right: 20px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 766px) {
   .menu {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -237,11 +240,22 @@ p {
   .menu__logo {
     display: none;
   }
+  .menu__logo--size {
+    padding-left: 27px;
+  }
   .menu__element {
     padding: 20px;
   }
   .menu__icono {
     display: none;
+  }
+  .menu--icono {
+    margin-right: 15px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .menu__button {
+    padding-left: 20px;
   }
 }
 
@@ -278,6 +292,25 @@ p {
   width: 24%;
 }
 
+@media (max-width: 700px) {
+  .banner {
+    padding-top: 150px;
+    padding-left: 17px;
+  }
+  .banner__title {
+    margin-left: 0;
+  }
+  .banner__p {
+    width: 60%;
+  }
+}
+
+@media (max-width: 414px) {
+  .banner {
+    background-image: url("../imag/fondo-414w.jpg");
+  }
+}
+
 .feature {
   background-color: #04171E;
   color: white;
@@ -311,12 +344,6 @@ p {
           align-items: center;
 }
 
-@media (max-width: 700px) {
-  .feature__info {
-    width: 50%;
-  }
-}
-
 .feature__text {
   font-family: Raleway;
   font-size: 18px;
@@ -325,18 +352,34 @@ p {
           box-sizing: border-box;
 }
 
-@media (max-width: 700px) {
-  .feature__text {
-    width: 100%;
-  }
-}
-
-@media (max-width: 700px) {
+@media (max-width: 986px) {
   .feature {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    width: 100%;
+  }
+  .feature__info {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 0;
+  }
+  .feature__text {
+    width: 34%;
+    text-align: center;
+    padding-left: 0;
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 400px) {
+  .feature__text {
+    width: 65%;
   }
 }
 
@@ -400,6 +443,12 @@ p {
 
 .button__product {
   margin-left: 15%;
+}
+
+@media (max-width: 700px) {
+  .button__ad {
+    margin-left: 0;
+  }
 }
 
 .input {
