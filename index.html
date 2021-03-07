@@ -95,7 +95,7 @@
         <h1 class="title">Productos destacados</h1>
         <div class="products__ramo">
 
-            <article>
+            <article class="products__contents">
 
                 <section class="products__info">
 
@@ -127,7 +127,7 @@
 
             </article>
 
-            <article>
+            <article class="products__contents">
 
                 <section class="products__info">
 
@@ -160,7 +160,7 @@
             </article>
 
 
-            <article>
+            <article class="products__contents">
 
                 <section class="products__info">
 
@@ -203,13 +203,20 @@
 
     </section>
 
-    <div class="gallery js-flickity" data-flickity-options='{ "freeScroll": true, "wrapAround": true }'>
-        <div class="gallery-cell gallery-pictureone"></div>
-        <div class="gallery-cell gallery-picturetwo"></div>
-        <div class="gallery-cell gallery-picturethree"></div>
-        <div class="gallery-cell gallery-picturefour"></div>
-        <div class="gallery-cell gallery-picturefive"></div>
-    </div>
+    <section class="gallery">
+
+        <h1 class="title title--white">Galería</h1>
+        <div class="gallery js-flickity" data-flickity-options='{ "freeScroll": true, "wrapAround": true }'>
+            <div class="gallery-cell gallery-pictureone"></div>
+            <div class="gallery-cell gallery-picturetwo"></div>
+            <div class="gallery-cell gallery-picturethree"></div>
+            <div class="gallery-cell gallery-picturefour"></div>
+            <div class="gallery-cell gallery-picturefive"></div>
+        </div>
+
+    </section>
+
+    
 
     <section class="newsletter">
 
@@ -218,11 +225,11 @@
 
         <div class="newsletter__input">
 
-            <h1 class="title">Boletín y ofertas</h1>
+            <h1 class="title title--nocenter">Boletín y ofertas</h1>
             <p class="input__p">Suscribete y reciba ofertas exclusivas:</p>
             <input class="input input__text" type="text" placeholder="Nombre">
             <input class="input input__text" type="text" placeholder="Correo electronico"></br>
-            <button class="button"> Suscribirse</button>
+            <button class="button button--padding"> Suscribirse</button>
             
 
         </div>

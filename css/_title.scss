@@ -7,4 +7,16 @@
     font-size: 35px;
     margin-bottom: 0;
 
+    &--white{
+        color:white;
+    }
+
+    &--nocenter{
+        text-align: start;
+    }
+
+    @media (max-width: 1053px) {
+        text-align: center;
+    }
+
 }

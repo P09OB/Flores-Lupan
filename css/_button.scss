@@ -16,18 +16,22 @@
 
     }
 
+    &--padding{
+
+        margin-top: 0;
+
+    }
+
     &__product{
 
         margin-left: 15%;
     }
 
     @media (max-width: 700px) {
-
         &__ad{
-            margin-left: 0;
-    
+        margin-left: 45%;
+        margin-top: 20px;
         }
-
     }
 
     

@@ -7,7 +7,7 @@
     &__info{
 
         width: 30%;
-        padding: 80px 0 0 60%;
+        padding: 60px 0 0 60%;
         font-family: Raleway;
         color: #003548;
         font-weight: 600;
@@ -16,10 +16,48 @@
 
     }
 
+    @media (max-width: 1171px) {
+
+        background-image: url("../imag/adFlowers-1171w.jpg");
+    
+
+
+    }
+    @media (max-width: 800px){
+
+        &__info{
+            width: 40%;
+
+        }
+
+        
+    }
+
     @media (max-width: 700px) {
+
+        background-image: url("../imag/adFlowers-720.png");
+        
+
+        &__info{
+        width: 40%;
+        padding-left: 45%;
+
+        }
 
         
 
+
+    }
+
+    @media (max-width: 600px) {
+
+        &__info{
+            width: 50%;
+        font-size: 18px;
+        padding-left: 45%;
+
+        }
+        
     }
 
     

@@ -31,25 +31,22 @@ p {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  margin-top: 68px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   height: 100%;
 }
 
-@media (max-width: 700px) {
-  .products__ramo {
-    display: inline-block;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
+.products__contents {
+  padding-top: 50px;
 }
 
 .products__price {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 97%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -107,11 +104,41 @@ p {
 
 .ad__info {
   width: 30%;
-  padding: 80px 0 0 60%;
+  padding: 60px 0 0 60%;
   font-family: Raleway;
   color: #003548;
   font-weight: 600;
   font-size: 26px;
+}
+
+@media (max-width: 1171px) {
+  .ad {
+    background-image: url("../imag/adFlowers-1171w.jpg");
+  }
+}
+
+@media (max-width: 800px) {
+  .ad__info {
+    width: 40%;
+  }
+}
+
+@media (max-width: 700px) {
+  .ad {
+    background-image: url("../imag/adFlowers-720.png");
+  }
+  .ad__info {
+    width: 40%;
+    padding-left: 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .ad__info {
+    width: 50%;
+    font-size: 18px;
+    padding-left: 45%;
+  }
 }
 
 .footer {
@@ -143,36 +170,68 @@ p {
 }
 
 .newsletter {
-  background-color: #E6E7E9;
+  background-color: #eaecef;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   color: #003548;
   margin-top: 0;
   width: 100%;
-  height: 450px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.newsletter__input {
+  width: 35%;
+  padding-top: 63px;
+  padding-left: 100px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.newsletter__p {
+  padding-bottom: 20px;
 }
 
 .newsletter__img {
   background-image: url(../imag/newsletter.jpg);
   background-size: cover;
-  width: 50em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 685px;
   height: 28em;
   font-size: 16px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 982px) {
   .newsletter__img {
-    background-image: url(../imag/newsletter-450w.jpg);
-    width: 100%;
-    height: 40em;
-    font-size: 16px;
+    -webkit-transform: translateX(-2em);
+            transform: translateX(-2em);
   }
 }
 
 @media (max-width: 700px) {
+  .newsletter__img {
+    -webkit-transform: translateX(-10em);
+            transform: translateX(-10em);
+  }
+}
+
+@media (max-width: 1053px) {
   .newsletter {
-    display: inline-block;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    padding-bottom: 90px;
+  }
+  .newsletter__input {
+    width: 100%;
+    padding-left: 0;
+  }
+  .newsletter__img {
+    background-image: url(../imag/newaletter-1053w.jpg);
+    width: 100%;
   }
 }
 
@@ -385,7 +444,8 @@ p {
 
 .gallery {
   background: #003548;
-  padding-top: 10px;
+  padding-top: 70px;
+  padding-bottom: 20px;
 }
 
 .gallery-cell {
@@ -441,13 +501,18 @@ p {
   margin-left: 60%;
 }
 
+.button--padding {
+  margin-top: 0;
+}
+
 .button__product {
   margin-left: 15%;
 }
 
 @media (max-width: 700px) {
   .button__ad {
-    margin-left: 0;
+    margin-left: 45%;
+    margin-top: 20px;
   }
 }
 
@@ -458,12 +523,28 @@ p {
 }
 
 .input__text {
-  width: 50%;
+  width: 100%;
   height: 47px;
   border-radius: 16px;
   margin-bottom: 23px;
   border: none;
   padding-left: 15px;
+}
+
+.input__p {
+  padding-bottom: 16px;
+}
+
+@media (max-width: 1789px) {
+  .input__text {
+    width: 70%;
+  }
+}
+
+@media (max-width: 1053px) {
+  .input__text {
+    width: 30%;
+  }
 }
 
 .title {
@@ -473,5 +554,19 @@ p {
   font-weight: bold;
   font-size: 35px;
   margin-bottom: 0;
+}
+
+.title--white {
+  color: white;
+}
+
+.title--nocenter {
+  text-align: start;
+}
+
+@media (max-width: 1053px) {
+  .title {
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=main.css.map */
