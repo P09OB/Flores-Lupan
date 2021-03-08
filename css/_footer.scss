@@ -1,25 +1,70 @@
 .footer{
     background-color: #04171E;
-    display: flex;
+    display: flex;    
+    flex-direction: column;
     width: 100%;
+    align-items: center;
+    color: white;
 
+    &__img{
+        padding-top: 60px;
+        padding-bottom: 40px;
 
+        width: 158px;
+    }
 
-    &__list{
-        color: white;
+    &__menu{
+
         display: flex;
-        width: 100%;
+        width: 50%;
+        border-top: solid 1px;
+        justify-content: space-evenly;
+        padding-top: 60px;
+    }
 
-        @media (max-width: 600px) {
+    &__element{
+        padding-bottom: 20px;
+    }
+    &__element:hover{
+        color: #CFA24F;
+    }
 
-            display: inline-block;
-                    
+    &__redesSociales{
+        display: flex;
+        width: 30%;
+        justify-content: space-evenly;
+        padding-top: 60px;
+
+    }
+
+    &__text{
+        display: flex;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        width: 30%;
+        color: gray;
+        justify-content: space-between;
+
+
+    }
+
+    @media (max-width: 800px) {
+
+        &__menu{
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
         }
-    }
 
-    @media (max-width: 600px) {
+        &__text{
+            width: 80%;
+        }
 
-        display: inline-block;
-                
+        
     }
+    
+
+    
 }
