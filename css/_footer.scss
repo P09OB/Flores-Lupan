@@ -5,6 +5,9 @@
     width: 100%;
     align-items: center;
     color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
 
     &__img{
         padding-top: 60px;
@@ -19,7 +22,8 @@
         width: 50%;
         border-top: solid 1px;
         justify-content: space-evenly;
-        padding-top: 60px;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 
     &__element{
@@ -31,15 +35,14 @@
 
     &__redesSociales{
         display: flex;
-        width: 30%;
+        width: 20%;
         justify-content: space-evenly;
-        padding-top: 60px;
 
     }
 
     &__text{
         display: flex;
-        padding-top: 60px;
+        padding-top: 30px;
         padding-bottom: 60px;
         width: 30%;
         color: gray;

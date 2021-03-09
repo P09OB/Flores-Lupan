@@ -1,0 +1,22 @@
+.interaction{
+
+    display: flex;
+    flex-wrap: wrap;
+
+    &__picture{
+        width: 649px;
+    }
+
+    &__photo1{
+
+        width: 141px;
+        border: 1px solid #CCCCCC;
+        box-sizing: border-box;
+        border-radius: 29px;
+
+    }
+
+    &__opcion{
+        
+    }
+}

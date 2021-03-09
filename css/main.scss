@@ -18,18 +18,16 @@ p{
     padding-top: 10px;
 
 }
- 
-
-@import './products';
-@import './ad';
-@import './footer';
-@import './newsletter';
-
 
 @import './menu';
 @import './banner';
 @import './feature';
+@import './products';
+@import './ad';
+@import './interaction';
 @import './gallery';
+@import './newsletter';
+@import './footer';
 
   
 @import './button';
