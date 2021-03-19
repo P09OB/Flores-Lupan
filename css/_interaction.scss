@@ -1,7 +1,34 @@
 .interaction{
 
     display: flex;
+    width: 100%;
     flex-wrap: wrap;
+    color: #003548;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    font-size: 15px;
+
+    &__bouquet{
+    
+    width: 650px;
+    height: 650px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../imag/astromelias.jpg");
+
+        @media (max-width: 627px) {
+
+            width: 450px;
+            height: 450px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            
+
+        }
+
+    }
 
     &__picture{
         width: 649px;
@@ -13,10 +40,32 @@
         border: 1px solid #CCCCCC;
         box-sizing: border-box;
         border-radius: 29px;
+        margin-left: 40px;
+
+        
 
     }
+
+    
 
     &__opcion{
+
+    padding-top: 100px;
+
+        @media (max-width: 1015px) {
+
+            display: flex;
+            
+        }
+
+        @media (max-width: 758px) {
+
+            display: block;
+            
+        }
+
         
     }
+
+    
 }

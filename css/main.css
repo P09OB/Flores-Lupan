@@ -352,8 +352,32 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  color: #003548;
+  font-family: 'Merriweather', serif;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.interaction__bouquet {
+  width: 650px;
+  height: 650px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../imag/astromelias.jpg");
+}
+
+@media (max-width: 627px) {
+  .interaction__bouquet {
+    width: 450px;
+    height: 450px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }
 
 .interaction__picture {
@@ -366,6 +390,25 @@ p {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 29px;
+  margin-left: 40px;
+}
+
+.interaction__opcion {
+  padding-top: 100px;
+}
+
+@media (max-width: 1015px) {
+  .interaction__opcion {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (max-width: 758px) {
+  .interaction__opcion {
+    display: block;
+  }
 }
 
 .gallery {
@@ -647,6 +690,10 @@ p {
 
 .title--nocenter {
   text-align: start;
+}
+
+.title--padding {
+  padding-top: 80px;
 }
 
 @media (max-width: 1053px) {

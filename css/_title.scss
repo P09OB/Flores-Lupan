@@ -15,6 +15,10 @@
         text-align: start;
     }
 
+    &--padding{
+        padding-top: 80px;
+    }
+
     @media (max-width: 1053px) {
         text-align: center;
     }
