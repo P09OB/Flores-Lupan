@@ -1,12 +1,12 @@
 .interaction{
 
     display: flex;
-    width: 100%;
     flex-wrap: wrap;
     color: #003548;
     font-family: 'Merriweather', serif;
     font-weight: bold;
     font-size: 15px;
+    margin-left: 120px;
 
     &__bouquet{
     
@@ -46,22 +46,27 @@
 
     }
 
-    
-
     &__opcion{
 
     padding-top: 100px;
+    }
 
-        @media (max-width: 1015px) {
+    @media (max-width: 1135px) {
+
+        &__opcion{
 
             display: flex;
-            
         }
+    }
 
-        @media (max-width: 758px) {
+    @media (max-width: 858px) {
+
+        margin-left: 0px;
+
+
+        &__opcion{
 
             display: block;
-            
         }
 
         

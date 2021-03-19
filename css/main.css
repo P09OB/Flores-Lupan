@@ -352,13 +352,13 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   color: #003548;
   font-family: 'Merriweather', serif;
   font-weight: bold;
   font-size: 15px;
+  margin-left: 120px;
 }
 
 .interaction__bouquet {
@@ -397,7 +397,7 @@ p {
   padding-top: 100px;
 }
 
-@media (max-width: 1015px) {
+@media (max-width: 1135px) {
   .interaction__opcion {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -405,7 +405,10 @@ p {
   }
 }
 
-@media (max-width: 758px) {
+@media (max-width: 858px) {
+  .interaction {
+    margin-left: 0px;
+  }
   .interaction__opcion {
     display: block;
   }
@@ -694,6 +697,14 @@ p {
 
 .title--padding {
   padding-top: 80px;
+}
+
+.title--subtitle {
+  font-size: 18px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-left: 40px;
+  text-align: center;
 }
 
 @media (max-width: 1053px) {
