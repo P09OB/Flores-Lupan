@@ -13,13 +13,13 @@ bouquetStatis.addEventListener('click', () => {
 
     if (selectSunflower === true && selectStatis === true) {
 
-        interaction.style.backgroundImage = "url('../imag/girasolEstatis.jpg')";
+        interaction.style.backgroundImage = "url('./imag/girasolEstatis.jpg')";
     } else {
 
-        interaction.style.backgroundImage = "url('../imag/estatis.jpg')";
+        interaction.style.backgroundImage = "url('./imag/estatis.jpg')";
     }
     if (selectAstromelia === true && selectStatis === true) {
-        interaction.style.backgroundImage = "url('../imag/atromeliasEstatis.jpg')";
+        interaction.style.backgroundImage = "url('./imag/atromeliasEstatis.jpg')";
     }
 
     bouquetStatis.style.border = "2px solid #003548";
@@ -35,14 +35,14 @@ bouquetSunflower.addEventListener('click', () => {
     selectAstromelia = false;
 
     if (selectSunflower === true && selectStatis === true) {
-        interaction.style.backgroundImage = "url('../imag/girasolEstatis.jpg')";
+        interaction.style.backgroundImage = "url('./imag/girasolEstatis.jpg')";
     } else {
 
-        interaction.style.backgroundImage = "url('../imag/girasol.jpg')";
+        interaction.style.backgroundImage = "url('./imag/girasol.jpg')";
     }
 
     if (selectMargaritas === true && selectSunflower === true) {
-        interaction.style.backgroundImage = "url('../imag/girasolMargaritas.jpg')";
+        interaction.style.backgroundImage = "url('./imag/girasolMargaritas.jpg')";
     }
 
     bouquetAstromelia.style.border = "1px solid #CCCCCC";
@@ -57,13 +57,13 @@ bouquetMargaritas.addEventListener('click', () => {
     selectStatis = false;
 
     if (selectMargaritas === true && selectSunflower === true) {
-        interaction.style.backgroundImage = "url('../imag/girasolMargaritas.jpg')";
+        interaction.style.backgroundImage = "url('./imag/girasolMargaritas.jpg')";
 
     } else{
-        interaction.style.backgroundImage = "url('../imag/margaritas.jpg')";
+        interaction.style.backgroundImage = "url('./imag/margaritas.jpg')";
 
     } if(selectMargaritas === true && selectAstromelia === true){
-        interaction.style.backgroundImage = "url('../imag/astromeliasMargaritas.jpg')";
+        interaction.style.backgroundImage = "url('./imag/astromeliasMargaritas.jpg')";
     }
 
     bouquetMargaritas.style.border = "2px solid #003548";
@@ -77,15 +77,15 @@ bouquetAstromelia.addEventListener('click', () => {
     selectAstromelia = true;
 
     if (selectAstromelia === true && selectMargaritas === true) {
-        interaction.style.backgroundImage = "url('../imag/astromeliasMargaritas.jpg')";
+        interaction.style.backgroundImage = "url('./imag/astromeliasMargaritas.jpg')";
     } else{
-        interaction.style.backgroundImage = "url('../imag/astromelias.jpg')";
+        interaction.style.backgroundImage = "url('./imag/astromelias.jpg')";
 
     }
 
     if(selectAstromelia === true && selectStatis === true){
 
-        interaction.style.backgroundImage = "url('../imag/atromeliasEstatis.jpg')";        
+        interaction.style.backgroundImage = "url('./imag/atromeliasEstatis.jpg')";        
     }
     bouquetSunflower.style.border = "1px solid #CCCCCC";
     bouquetAstromelia.style.border = "2px solid #003548";
