@@ -359,11 +359,15 @@ p {
   font-weight: bold;
   font-size: 15px;
   margin-left: 120px;
+  padding-bottom: 70px;
 }
 
 .interaction__bouquet {
   width: 650px;
   height: 650px;
+  padding-top: 70px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -416,8 +420,7 @@ p {
 
 .gallery {
   background: #003548;
-  padding-top: 70px;
-  padding-bottom: 20px;
+  padding-top: 90px;
 }
 
 .gallery-cell {
@@ -645,6 +648,12 @@ p {
     margin-left: 45%;
     margin-top: 20px;
   }
+}
+
+.button:hover {
+  background-color: #cfa24fb5;
+  border: solid white 1px;
+  color: white;
 }
 
 .input {
