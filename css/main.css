@@ -394,11 +394,14 @@ p {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 29px;
-  margin-left: 40px;
+  margin-left: 20px;
 }
 
 .interaction__opcion {
-  padding-top: 100px;
+  padding-top: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media (max-width: 1135px) {
@@ -412,6 +415,9 @@ p {
 @media (max-width: 858px) {
   .interaction {
     margin-left: 0px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .interaction__opcion {
     display: block;

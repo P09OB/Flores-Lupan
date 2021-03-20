@@ -43,12 +43,13 @@
         border: 1px solid #CCCCCC;
         box-sizing: border-box;
         border-radius: 29px;
-        margin-left: 40px;
+        margin-left: 20px;
     }
 
     &__opcion{
 
-    padding-top: 100px;
+    padding-top: 20px;
+    justify-content: center;
     }
 
     @media (max-width: 1135px) {
@@ -62,6 +63,8 @@
     @media (max-width: 858px) {
 
         margin-left: 0px;
+        justify-content: center;
+
 
 
         &__opcion{
