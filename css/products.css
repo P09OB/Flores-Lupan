@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap");
+body {
+  background-color: #07161B;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.menu {
+  background-color: #04171E;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 24px;
+  padding-bottom: 20px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  z-index: 10;
+  width: 100%;
+}
+
+.menu__element:hover {
+  color: #CFA24F;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.menu__responsive {
+  display: none;
+}
+
+.menu--icono {
+  margin-right: 20px;
+}
+
+@media (max-width: 766px) {
+  .menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .menu__responsive {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+  .menu__desaparecer {
+    display: none;
+  }
+  .menu__logo {
+    display: none;
+  }
+  .menu__logo--size {
+    padding-left: 27px;
+  }
+  .menu__element {
+    padding: 20px;
+  }
+  .menu__icono {
+    display: none;
+  }
+  .menu--icono {
+    margin-right: 15px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .menu__button {
+    padding-left: 20px;
+  }
+}
+
+.categories {
+  color: white;
+  width: 100%;
+  height: 190px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  overflow: auto;
+  padding-top: 20px;
+}
+
+.categories__all {
+  padding-right: 16px;
+}
+
+.categories__img {
+  width: 131px;
+  height: 149px;
+  border-radius: 17px 17px 17px 17px;
+}
+/*# sourceMappingURL=products.css.map */

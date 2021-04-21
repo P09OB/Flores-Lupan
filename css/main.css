@@ -7,6 +7,15 @@
   outline: none;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
 body {
   background-color: white;
 }
@@ -107,6 +116,8 @@ p {
   padding-left: 120px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .banner__title {
@@ -307,6 +318,8 @@ p {
 .ad {
   background-image: url("../imag/adFlowers.png");
   height: 261px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .ad__info {
@@ -443,6 +456,11 @@ p {
   line-height: 200px;
   font-size: 80px;
   color: transparent;
+}
+
+.gallery-size {
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .gallery-pictureone {

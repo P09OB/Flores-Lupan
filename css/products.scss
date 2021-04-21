@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap");
+
+body {
+    background-color: #07161B;
+    //background-color: rosybrown;
+}
+a{
+    text-decoration:none;
+  }
+  a:visited {color: white; text-decoration: none }
+
+  ::-webkit-scrollbar {display: none;}
+
+
+@import './menu';
+@import './categories';
