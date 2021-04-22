@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="./css/products.css">
 
 </head>
+
 <body class="bodyProducts">
 
     <nav class="menu">
@@ -35,7 +37,7 @@
 
     </nav>
     <section class="categories">
-        <div class="categories__all" >
+        <div class="categories__all">
             <img class="categories__img" src='../imag/categoria1.jpg'>
             <p>Todo</p>
         </div>
@@ -57,8 +59,71 @@
         </div>
 
     </section>
-    
-</body>
-</html>
 
-<script src="./scripts/main.js"></script>
+    <section class="filter">
+        <button id="filtro">Filtro</button>
+        <section class="filter__opcions">
+            <div>
+                <h3>Ordenar</h3>
+                <select>
+                    <option>Todos</option>
+                    <option>Precio Ascendente</option>
+                    <option>Precio Descendente</option>
+                    <option>Duración Ascendente</option>
+                    <option>Duración Descendente</option>
+                    <option>Puntuación</option>
+
+                </select>
+            </div>
+            <div>
+                <h3>Ocasión</h3>
+                <select class="filter__occasion">
+                    <option>Todos</option>
+                    <option>Aniversario</option>
+                    <option>Condelencias</option>
+                    <option>Cumpleaños</option>
+                </select>
+            </div>
+            <div>
+                <h3>Color</h3>
+                <section class='filter__color'>
+                    <div class='filter__color--none filter__circle'></div>
+                    <div class='filter__color--red filter__circle'></div>
+                    <div class='filter__color--orange filter__circle'></div>
+                    <div class='filter__color--yellow filter__circle'></div>
+                    <div class='filter__color--pink filter__circle'></div>
+                    <div class='filter__color--blue filter__circle'></div>
+                    <div class='filter__color--green filter__circle'></div>
+                    <div class='filter__color--purple filter__circle'></div>
+                </section>
+            </div>
+            <div>
+                <h3>Clima</h3>
+                <section class='filter__weather'>
+                    <div>
+                        <img class='filter__img' src="./imag/Snowflake.png">
+                        <p>Frio</p>
+                    </div>
+                    <div>
+                        <img class='filter__img' src="./imag/Sun.png">
+                        <p>Calido</p>
+                    </div>
+
+                </section>
+            </div>
+        </section>
+    </section>
+    <section class="list">
+        <div>
+            <img>
+            <p></p>
+            <p></p>
+            <button></button>
+        </div>
+    </section>
+
+</body>
+
+</html>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+<script src="./scripts/products.js"></script>

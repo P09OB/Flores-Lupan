@@ -123,4 +123,44 @@ a:visited {
   height: 149px;
   border-radius: 17px 17px 17px 17px;
 }
+
+.filter {
+  width: 100%;
+  height: 10;
+  color: white;
+}
+
+.filter__opcions {
+  display: none;
+}
+
+.filter__color {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 140px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.filter__circle {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background-color: bisque;
+}
+
+.filter__weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+}
+
+.filter__img {
+  height: 35px;
+  width: 35px;
+}
 /*# sourceMappingURL=products.css.map */
