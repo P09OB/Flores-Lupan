@@ -1,0 +1,67 @@
+.productForm__label {
+  display: block;
+  margin-top: 30px;
+}
+
+.productForm__label--checkbox {
+  margin-top: 8px;
+}
+
+.productForm__input {
+  display: block;
+  margin-top: 20px;
+}
+
+.productForm__button {
+  display: block;
+  margin-top: 30px;
+}
+
+.productForm__img {
+  width: 200px;
+}
+
+.c-checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c-checkbox__fake {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c-checkbox__fake--blue {
+  background-color: blue;
+}
+
+.c-checkbox__fake--yellow {
+  background-color: yellow;
+}
+
+.c-checkbox__fake--green {
+  background-color: yellowgreen;
+}
+
+.c-checkbox__fake--fuchsia {
+  background-color: fuchsia;
+}
+
+.c-checkbox__fake--red {
+  background-color: red;
+}
+
+.c-checkbox__fake--orange {
+  background-color: orange;
+}
+
+.c-checkbox--invisible {
+  opacity: 0;
+  width: 0;
+}
+/*# sourceMappingURL=admi.css.map */

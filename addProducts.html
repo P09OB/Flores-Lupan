@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador</title>
+    <link rel="stylesheet" href="./css/admi.css">
+</head>
+
+<body>
+    <section>Flores lupan</section>
+
+    <form class="productForm">
+        <div>
+            <img>
+            <p>Agregando</p>
+        </div>
+        <div>
+            <img>
+            <p>Producto Agregado</p>
+        </div>
+        <div>
+            <img>
+            <p>Error</p>
+        </div>
+
+
+
+
+        <label class="productForm__label" for="name">Nombre</label>
+        <input class="productForm__input" id="name" name="name" type="text" placeholder="Nombre del producto">
+
+        <label class="productForm__label" for="price">Precio</label>
+        <input class="productForm__input" id="price" name="price" type="number" placeholder="Precio">
+
+        <label for="type" class="productForm__label">Tipo de producto</label>
+        <select id="type" class="productForm__input" name="type">
+            <option value="">Selecciona un tipo</option>
+            <option value="conventional">Convencional</option>
+            <option value="exclusive">Exclusivo</option>
+            <option value="exotic">Exotico</option>
+            <option value="foliage">Follaje</option>
+        </select>
+        <label for="weather" class="productForm__label">Clima</label>
+        <select id="weather" class="productForm__input" name="weather">
+            <option value="">Seleccione un clima</option>
+            <option value="cold">Frio</option>
+            <option value="hot">Calido</option>
+        </select>
+
+        <label class="productForm__label">Ocasión</label>
+        <label class="productForm__label productForm__label--checkbox">
+            <input class="productForm__checkbox" name="occasion_anniversary" type="checkbox">Aniversario
+        </label>
+        <label class="productForm__label productForm__label--checkbox">
+            <input class="productForm__checkbox" name="occasion_condolences" type="checkbox">Condolencias
+        </label>
+        <label class="productForm__label productForm__label--checkbox">
+            <input class="productForm__checkbox" name="occasion_birthday" type="checkbox">Cumpleaños
+        </label>
+
+        <label class="productForm__label" for="duration">Duración</label>
+        <input class="productForm__input" id="duration" type="number" name="duration" placeholder="0">
+
+        <label class="productForm__label">Color</label>
+        <section class="c-checkbox">
+            <div>
+                <label>
+                    <input class="c-checkbox--invisible" type="checkbox" name="color__pink">
+                    <span class="c-checkbox__fake c-checkbox__fake--yellow"></span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input class="c-checkbox--invisible" type="checkbox" name="color__blue">
+                    <span class="c-checkbox__fake c-checkbox__fake--blue"></span>
+                </label>
+            </div>
+
+            <div>
+                <label>
+                    <input class="c-checkbox--invisible" type="checkbox" name="color__green">
+                    <span class="c-checkbox__fake c-checkbox__fake--green"></span>
+                </label>
+            </div>
+            <div>
+
+                <label>
+                    <input class="c-checkbox--invisible" type="checkbox" name="color__fuchsia">
+                    <span class="c-checkbox__fake c-checkbox__fake--fuchsia"></span>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input class="c-checkbox--invisible" type="checkbox" name="color__red">
+                    <span class="c-checkbox__fake c-checkbox__fake--red"></span>
+                </label>
+            </div>
+
+            <div>
+                <label>
+                    <input class="c-checkbox--invisible" type="checkbox" name="color__orange">
+                    <span class="c-checkbox__fake c-checkbox__fake--orange"></span>
+                </label>
+            </div>
+        </section>
+
+        <label for="description" class="productForm__label">Descripción</label>
+        <input id="description" class="productForm__input" type="text" name="description" placeholder="Detalles del producto">
+        <label for="image" class="productForm__label"></label>
+        <img class="productForm__img" src="">
+        <input id="image" class="productForm__input" type="file" name="image">
+        <button class="productForm__button" type="submit">Enviar</button>
+
+    </form>
+
+
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-storage.js"></script>
+
+<script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyCWgy2tCdcWUWuq2kCD7Iahwm8klwpqZHM",
+        authDomain: "lupan-4ba70.firebaseapp.com",
+        projectId: "lupan-4ba70",
+        storageBucket: "lupan-4ba70.appspot.com",
+        messagingSenderId: "435256614744",
+        appId: "1:435256614744:web:1b9e40f339cf09f67d4f2d"
+    };
+    firebase.initializeApp(firebaseConfig);
+</script>
+
+<script src="./scripts/productForm.js"></script>
+
+</html>

@@ -1,0 +1,35 @@
+.c-checkbox{
+    display: flex;
+
+    &__fake{
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        display: inline-flex;
+        &--blue{
+            background-color: blue;
+        }
+        &--yellow{
+            background-color: yellow;
+        }
+        &--green{
+            background-color: yellowgreen;
+        }
+        &--fuchsia{
+            background-color: fuchsia;
+        }
+        &--red{
+            background-color: red;
+        }
+        &--orange{
+            background-color: orange;
+        }
+    }
+
+    &--invisible{
+
+        opacity: 0;
+        width: 0;
+
+    }
+}

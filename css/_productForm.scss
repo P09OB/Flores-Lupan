@@ -1,0 +1,32 @@
+.productForm{
+    
+    &__label{
+        display: block;
+        margin-top: 30px;
+        &--checkbox{
+            margin-top: 8px;
+        }
+        
+    }
+
+    &__input{
+        display: block;
+        margin-top: 20px;
+        
+    }
+
+    &__button{
+        display: block;
+        margin-top: 30px;
+
+    }
+
+    &__img{
+        width: 200px;
+    }
+
+   
+
+    
+
+}
