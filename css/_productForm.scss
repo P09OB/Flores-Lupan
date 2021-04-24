@@ -1,4 +1,14 @@
 .productForm{
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 852px;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 16px;
+  padding-left: 49px;
+  font-family: Poppins;
+
     
     &__label{
         display: block;
@@ -18,15 +28,64 @@
     &__button{
         display: block;
         margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
 
     }
 
     &__img{
         width: 200px;
+        margin: 4px 10px 0 0;
     }
+
+    &__images{
+        display: flex;
+    }
+
+    &__addAd{
+        background-color: #CFA24F;
+        display: flex;
+        align-items: center;
+        color: white;
+    }
+
+    &__load{
+        background-color: #F1F2F3;
+        display: flex;
+        align-items: center;
+        color: #04171E;
+    }
+
+    &__wrong{
+        background-color: #AB2E2E;
+        display: flex;
+        align-items: center;
+        color: white;
+    }
+
+    &__state{
+        width: 58px;
+        margin-right: 10px;
+        margin-left: 50px;
+
+    }
+
 
    
 
     
 
+}
+
+.nav{
+    background: rgba(4, 23, 30, 0.92);
+    width: 1440px;
+    height: 104px;
+
+    &__logo{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 24px;
+    }
 }

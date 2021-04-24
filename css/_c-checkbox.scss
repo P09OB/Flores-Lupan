@@ -6,8 +6,12 @@
         width: 35px;
         border-radius: 50%;
         display: inline-flex;
+        
         &--blue{
             background-color: blue;
+            &:before{
+                border: 1px solid rgb(80, 196, 27);
+            }
         }
         &--yellow{
             background-color: yellow;
@@ -24,6 +28,8 @@
         &--orange{
             background-color: orange;
         }
+
+        
     }
 
     &--invisible{
@@ -32,4 +38,6 @@
         width: 0;
 
     }
+
+    
 }

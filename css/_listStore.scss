@@ -1,0 +1,30 @@
+.list{
+    display: flex;    
+    flex-wrap: wrap;
+    &__info{
+        display: flex;
+        
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 18px;
+        color: white;
+    }
+
+    &__icono{
+        width: 41px;
+        height: 41px;
+    }
+
+    &__img{
+        display:block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 328px;
+  height: 455px;
+    }
+
+    @media (max-width: 414px) {
+        flex-wrap: wrap;
+        
+    }
+}

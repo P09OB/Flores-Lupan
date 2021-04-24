@@ -36,6 +36,7 @@
 
 
     </nav>
+
     <section class="categories">
         <div class="categories__all">
             <img class="categories__img" src='../imag/categoria1.jpg'>
@@ -72,12 +73,11 @@
                     <option>Duración Ascendente</option>
                     <option>Duración Descendente</option>
                     <option>Puntuación</option>
-
                 </select>
             </div>
             <div>
                 <h3>Ocasión</h3>
-                <select class="filter__occasion">
+                <select class="filter__occasion" name="occasion">
                     <option>Todos</option>
                     <option>Aniversario</option>
                     <option>Condelencias</option>
@@ -113,17 +113,15 @@
             </div>
         </section>
     </section>
-    <section class="list">
-        <div>
-            <img>
-            <p></p>
-            <p></p>
-            <button></button>
-        </div>
-    </section>
+
+    <section class="list"></section>
 
 </body>
 
 </html>
 
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-storage.js"></script>
+<script src="./scripts/general.js"></script>
 <script src="./scripts/products.js"></script>

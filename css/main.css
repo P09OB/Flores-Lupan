@@ -371,8 +371,10 @@ p {
   font-family: 'Merriweather', serif;
   font-weight: bold;
   font-size: 15px;
-  margin-left: 120px;
   padding-bottom: 70px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .interaction__bouquet {

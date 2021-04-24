@@ -10,24 +10,29 @@
 </head>
 
 <body>
-    <section>Flores lupan</section>
+    <section class="nav">
+        <input class="nav__logo" type="image" src="./imag/logo.png">
+    </section>
+
+    <nav>
+        <a>Agregar productos</a>
+        <a>Lista de productos</a>
+
+    </nav>
 
     <form class="productForm">
-        <div>
-            <img>
-            <p>Agregando</p>
+        <div class="productForm__load">
+            <img class="productForm__state" src="./imag/load.gif">
+            <p>Cargando...</p>
         </div>
-        <div>
-            <img>
+        <div class="productForm__addAd">
+            <img class="productForm__state" src="./imag/check.png">
             <p>Producto Agregado</p>
         </div>
-        <div>
-            <img>
+        <div class="productForm__wrong">
+            <img class="productForm__state" src="./imag/wrong.png">
             <p>Error</p>
         </div>
-
-
-
 
         <label class="productForm__label" for="name">Nombre</label>
         <input class="productForm__input" id="name" name="name" type="text" placeholder="Nombre del producto">
@@ -110,9 +115,9 @@
         <label for="description" class="productForm__label">Descripción</label>
         <input id="description" class="productForm__input" type="text" name="description" placeholder="Detalles del producto">
         <label for="image" class="productForm__label"></label>
-        <img class="productForm__img" src="">
-        <input id="image" class="productForm__input" type="file" name="image">
-        <button class="productForm__button" type="submit">Enviar</button>
+        <div class="productForm__images"></div>
+        <input multiple="true" id="image" class="productForm__input" type="file" name="image">
+        <button class="productForm__button button" type="submit">Enviar</button>
 
     </form>
 
@@ -122,19 +127,7 @@
 <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-storage.js"></script>
-
-<script>
-    var firebaseConfig = {
-        apiKey: "AIzaSyCWgy2tCdcWUWuq2kCD7Iahwm8klwpqZHM",
-        authDomain: "lupan-4ba70.firebaseapp.com",
-        projectId: "lupan-4ba70",
-        storageBucket: "lupan-4ba70.appspot.com",
-        messagingSenderId: "435256614744",
-        appId: "1:435256614744:web:1b9e40f339cf09f67d4f2d"
-    };
-    firebase.initializeApp(firebaseConfig);
-</script>
-
+<script src="./scripts/general.js"></script>
 <script src="./scripts/productForm.js"></script>
 
 </html>

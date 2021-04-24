@@ -112,6 +112,9 @@ a:visited {
   text-align: center;
   overflow: auto;
   padding-top: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .categories__all {
@@ -162,5 +165,47 @@ a:visited {
 .filter__img {
   height: 35px;
   width: 35px;
+}
+
+.list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.list__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 18px;
+  color: white;
+}
+
+.list__icono {
+  width: 41px;
+  height: 41px;
+}
+
+.list__img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 328px;
+  height: 455px;
+}
+
+@media (max-width: 414px) {
+  .list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 /*# sourceMappingURL=products.css.map */
