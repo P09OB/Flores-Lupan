@@ -1,11 +1,16 @@
 .c-checkbox{
     display: flex;
+    margin-top: 15px;
 
     &__fake{
         height: 35px;
         width: 35px;
         border-radius: 50%;
         display: inline-flex;
+        cursor: pointer;
+
+
+        
         
         &--blue{
             background-color: blue;

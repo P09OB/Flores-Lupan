@@ -1,0 +1,45 @@
+.listProducts{
+
+    display: block;
+    width: 852px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    color: #182A30;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 16px;
+    padding-left: 5px;
+    font-family: Poppins;
+
+    &__nav{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+
+    &__product{
+        display: flex;
+        justify-content: space-around;
+
+    }
+    &__list{
+
+        &--product{
+            margin-top: 40px;
+            padding-top: 20px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid #182A30;
+
+        }
+        
+    }
+    &__img{
+        width: 105px;
+        height: 105px;
+
+    }
+
+}

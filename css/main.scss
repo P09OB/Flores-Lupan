@@ -7,29 +7,32 @@
   margin: 0;
   outline: none;
 }
-a{
-  text-decoration:none;
+a {
+  text-decoration: none;
 }
-a:visited {color: white; text-decoration: none }
+a:visited {
+  color: white;
+  text-decoration: none;
+}
 
 body {
   background-color: white;
 }
 
-p{
-    padding-top: 10px;
+p {
+  padding-top: 10px;
 }
 
-@import './menu';
-@import './banner';
-@import './feature';
-@import './products';
-@import './ad';
-@import './interaction';
-@import './gallery';
-@import './newsletter';
-@import './footer';
+@import "./menu";
+@import "./banner";
+@import "./feature";
+@import "./products";
+@import "./ad";
+@import "./interaction";
+@import "./gallery";
+@import "./newsletter";
+@import "./footer";
 
-@import './button';
-@import './input';
-@import './title';
+@import "./button";
+@import "./input";
+@import "./title";

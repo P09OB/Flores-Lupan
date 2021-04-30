@@ -655,6 +655,7 @@ p {
   margin-top: 28px;
   border-radius: 16px;
   border: none;
+  cursor: pointer;
 }
 
 .button__ad {

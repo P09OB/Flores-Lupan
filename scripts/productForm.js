@@ -1,4 +1,6 @@
 const productsForm = document.querySelector('.productForm');
+const productFormAdd = document.querySelector('.productForm__addAd');
+const productFormLoad = document.querySelector('.productForm__load');
 const productImages = document.querySelector('.productForm__images');
 const imageFiles = [];
 
@@ -50,6 +52,8 @@ productsForm.addEventListener('submit', (event) => {
         const uploadPromises = [];
         const downloadUrlPromises = [];
 
+        productFormLoad.classList.remove('hidden');
+
         imageFiles.forEach((file) => {
 
             var storageRef = firebase.storage().ref();
@@ -77,6 +81,8 @@ productsForm.addEventListener('submit', (event) => {
                     images: images
                 }).then(() => {
                     //MENSAJE DE QUE YA TERMINO
+                    productFormLoad.classList.add('hidden');
+                    productFormAdd.classList.remove('hidden');
                 })
 
             });

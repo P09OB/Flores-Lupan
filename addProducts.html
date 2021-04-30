@@ -13,113 +13,130 @@
     <section class="nav">
         <input class="nav__logo" type="image" src="./imag/logo.png">
     </section>
+    <div class="productForm__load hidden">
+        <img class="productForm__state " src="./imag/load.gif">
+        <p>Cargando...</p>
+    </div>
+    <div class="productForm__addAd hidden">
+        <img class="productForm__state " src="./imag/check.png">
+        <p>Producto Agregado</p>
+    </div>
+    <div class="productForm__wrong hidden">
+        <img class="productForm__state " src="./imag/wrong.png">
+        <p>Llene todos los campos</p>
+    </div>
+    <section class="body">
 
-    <nav>
-        <a>Agregar productos</a>
-        <a>Lista de productos</a>
+        <nav class="body__nav">
+            <a class="body__nav--a"  href="./addProducts.html" >Agregar productos</a>
+            <a class="body__nav--a" href="./listProducts.html">Lista de productos</a>
 
-    </nav>
+        </nav>
 
-    <form class="productForm">
-        <div class="productForm__load">
-            <img class="productForm__state" src="./imag/load.gif">
-            <p>Cargando...</p>
-        </div>
-        <div class="productForm__addAd">
-            <img class="productForm__state" src="./imag/check.png">
-            <p>Producto Agregado</p>
-        </div>
-        <div class="productForm__wrong">
-            <img class="productForm__state" src="./imag/wrong.png">
-            <p>Error</p>
-        </div>
+        <form class="productForm">
 
-        <label class="productForm__label" for="name">Nombre</label>
-        <input class="productForm__input" id="name" name="name" type="text" placeholder="Nombre del producto">
+            <h1 class="title">Agrega un producto</h1>
 
-        <label class="productForm__label" for="price">Precio</label>
-        <input class="productForm__input" id="price" name="price" type="number" placeholder="Precio">
 
-        <label for="type" class="productForm__label">Tipo de producto</label>
-        <select id="type" class="productForm__input" name="type">
-            <option value="">Selecciona un tipo</option>
-            <option value="conventional">Convencional</option>
-            <option value="exclusive">Exclusivo</option>
-            <option value="exotic">Exotico</option>
-            <option value="foliage">Follaje</option>
-        </select>
-        <label for="weather" class="productForm__label">Clima</label>
-        <select id="weather" class="productForm__input" name="weather">
-            <option value="">Seleccione un clima</option>
-            <option value="cold">Frio</option>
-            <option value="hot">Calido</option>
-        </select>
+            <label class="productForm__label" for="name">Nombre</label>
+            <input class="productForm__input" id="name" name="name" type="text" placeholder="Nombre del producto">
 
-        <label class="productForm__label">Ocasión</label>
-        <label class="productForm__label productForm__label--checkbox">
-            <input class="productForm__checkbox" name="occasion_anniversary" type="checkbox">Aniversario
-        </label>
-        <label class="productForm__label productForm__label--checkbox">
-            <input class="productForm__checkbox" name="occasion_condolences" type="checkbox">Condolencias
-        </label>
-        <label class="productForm__label productForm__label--checkbox">
-            <input class="productForm__checkbox" name="occasion_birthday" type="checkbox">Cumpleaños
-        </label>
+            <label class="productForm__label" for="price">Precio</label>
+            <input class="productForm__input productForm__input--price" id="price" name="price" type="number"
+                placeholder="Precio">
 
-        <label class="productForm__label" for="duration">Duración</label>
-        <input class="productForm__input" id="duration" type="number" name="duration" placeholder="0">
+            <label for="type" class="productForm__label">Tipo de producto</label>
+            <select id="type" class="productForm__input" name="type">
+                <option value="">Selecciona un tipo</option>
+                <option value="conventional">Convencional</option>
+                <option value="exclusive">Exclusivo</option>
+                <option value="exotic">Exotico</option>
+                <option value="foliage">Follaje</option>
+            </select>
+            <label for="weather" class="productForm__label">Clima</label>
+            <select id="weather" class="productForm__input" name="weather">
+                <option value="">Seleccione un clima</option>
+                <option value="cold">Frio</option>
+                <option value="hot">Calido</option>
+            </select>
 
-        <label class="productForm__label">Color</label>
-        <section class="c-checkbox">
-            <div>
-                <label>
-                    <input class="c-checkbox--invisible" type="checkbox" name="color__pink">
-                    <span class="c-checkbox__fake c-checkbox__fake--yellow"></span>
-                </label>
-            </div>
-            <div>
-                <label>
-                    <input class="c-checkbox--invisible" type="checkbox" name="color__blue">
-                    <span class="c-checkbox__fake c-checkbox__fake--blue"></span>
-                </label>
-            </div>
+            <label class="productForm__label">Ocasión</label>
+            <label class="productForm__label productForm__label--checkbox">
+                <input class="productForm__checkbox" name="occasion_anniversary" type="checkbox">Aniversario
+            </label>
+            <label class="productForm__label productForm__label--checkbox">
+                <input class="productForm__checkbox" name="occasion_condolences" type="checkbox">Condolencias
+            </label>
+            <label class="productForm__label productForm__label--checkbox">
+                <input class="productForm__checkbox" name="occasion_birthday" type="checkbox">Cumpleaños
+            </label>
 
-            <div>
-                <label>
-                    <input class="c-checkbox--invisible" type="checkbox" name="color__green">
-                    <span class="c-checkbox__fake c-checkbox__fake--green"></span>
-                </label>
-            </div>
-            <div>
+            <label class="productForm__label" for="duration">Duración en días</label>
+            <input class="productForm__input productForm__input--duration" id="duration" type="number" name="duration"
+                placeholder="0">
 
-                <label>
-                    <input class="c-checkbox--invisible" type="checkbox" name="color__fuchsia">
-                    <span class="c-checkbox__fake c-checkbox__fake--fuchsia"></span>
-                </label>
-            </div>
-            <div>
-                <label>
-                    <input class="c-checkbox--invisible" type="checkbox" name="color__red">
-                    <span class="c-checkbox__fake c-checkbox__fake--red"></span>
-                </label>
-            </div>
+            <label class="productForm__label">Color</label>
+            <section class="c-checkbox">
+                <div>
+                    <label>
+                        <input class="c-checkbox--invisible" type="checkbox" name="color__pink">
+                        <span class="c-checkbox__fake c-checkbox__fake--yellow"></span>
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input class="c-checkbox--invisible" type="checkbox" name="color__blue">
+                        <span class="c-checkbox__fake c-checkbox__fake--blue"></span>
+                    </label>
+                </div>
 
-            <div>
-                <label>
-                    <input class="c-checkbox--invisible" type="checkbox" name="color__orange">
-                    <span class="c-checkbox__fake c-checkbox__fake--orange"></span>
-                </label>
-            </div>
-        </section>
+                <div>
+                    <label>
+                        <input class="c-checkbox--invisible" type="checkbox" name="color__green">
+                        <span class="c-checkbox__fake c-checkbox__fake--green"></span>
+                    </label>
+                </div>
+                <div>
 
-        <label for="description" class="productForm__label">Descripción</label>
-        <input id="description" class="productForm__input" type="text" name="description" placeholder="Detalles del producto">
-        <label for="image" class="productForm__label"></label>
-        <div class="productForm__images"></div>
-        <input multiple="true" id="image" class="productForm__input" type="file" name="image">
-        <button class="productForm__button button" type="submit">Enviar</button>
+                    <label>
+                        <input class="c-checkbox--invisible" type="checkbox" name="color__fuchsia">
+                        <span class="c-checkbox__fake c-checkbox__fake--fuchsia"></span>
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input class="c-checkbox--invisible" type="checkbox" name="color__red">
+                        <span class="c-checkbox__fake c-checkbox__fake--red"></span>
+                    </label>
+                </div>
 
-    </form>
+                <div>
+                    <label>
+                        <input class="c-checkbox--invisible" type="checkbox" name="color__orange">
+                        <span class="c-checkbox__fake c-checkbox__fake--orange"></span>
+                    </label>
+                </div>
+            </section>
+
+            <label for="description" class="productForm__label">Descripción</label>
+            <input id="description" class="productForm__input" type="text" name="description"
+                placeholder="Detalles del producto">
+            <label for="image" class="productForm__label">Fotos</label>
+            <section class="productForm__group">
+                <div class="productForm__input--file-input">
+                    <input multiple="true" id="image" class="productForm__input productForm__input--file" type="file"
+                        name="image">
+                    <label for="image">Select file</label>
+                </div>
+                <div class="productForm__images"></div>
+
+
+            </section>
+
+            <button class="productForm__button button" type="submit">Agregar</button>
+
+        </form>
+    </section>
 
 
 </body>

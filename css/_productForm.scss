@@ -1,88 +1,142 @@
-.productForm{
-  display:block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 852px;
-  border: 1px solid #000000;
-  box-sizing: border-box;
-  border-radius: 16px;
-  padding-left: 49px;
-  font-family: Poppins;
+.productForm {
+    display: block;
+    width: 852px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    color: #182A30;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 16px;
+    padding-left: 49px;
+    font-family: Poppins;
 
-    
-    &__label{
+    &__group {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 7px;
+    }
+
+    &__label {
         display: block;
         margin-top: 30px;
-        &--checkbox{
+        &--checkbox {
             margin-top: 8px;
         }
-        
     }
 
-    &__input{
+    &__input {
         display: block;
-        margin-top: 20px;
-        
+        margin-top: 7px;
+        width: 60%;
+        height: 47px;
+        border: 1px solid #003548;
+        padding-left: 10px;
+        border-radius: 4px;
+        box-sizing: border-box;
+
+
+        &--price {
+            background-image: url("../imag/CurrencyDollar.png");
+            background-repeat: no-repeat;
+            background-position: 10px 13px;
+            padding-left: 35px;
+        }
+
+        &--duration {
+            width: 8%;
+        }
+
+        &--file {
+            opacity: 0;
+            width: 0.1px;
+            height: 0.1px;
+            position: absolute;
+
+            &-input label {
+                display: block;
+                border-radius: 4px;
+                background-image: url("../imag/add.png");
+                background-size: 50% 50%;
+                background-repeat: no-repeat;
+                background-position: 27px 13px;
+                margin-right: 10px;
+                width: 105px;
+                height: 105px;
+                border-radius: 4px;
+                box-sizing: border-box;
+                padding-top: 40px;
+                border: 1px solid #003548;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #003548;
+                font-weight: bold;
+                cursor: pointer;
+            }
+        }
     }
 
-    &__button{
+    &__button {
         display: block;
-        margin-top: 30px;
-        margin-left: auto;
-        margin-right: auto;
-
+        margin-top: 40px;
     }
 
-    &__img{
-        width: 200px;
-        margin: 4px 10px 0 0;
+    &__img {
+        width: 105px;
+        height: 105px;
+        margin: 0px 10px 0 0;
+        border-radius: 4px;
+        border: 1px solid rgb(182, 181, 181);
     }
 
-    &__images{
+    &__images {
         display: flex;
     }
 
-    &__addAd{
-        background-color: #CFA24F;
+    &__addAd {
+        background-color: #cfa24f;
         display: flex;
         align-items: center;
         color: white;
+        position: sticky;
+        top: 0;
     }
 
-    &__load{
-        background-color: #F1F2F3;
-        display: flex;
-        align-items: center;
-        color: #04171E;
-    }
-
-    &__wrong{
-        background-color: #AB2E2E;
+    &__load {
+        background-color: #04171e;
         display: flex;
         align-items: center;
         color: white;
+        position: sticky;
+        top: 0;
     }
 
-    &__state{
+    &__wrong {
+        background-color: #ab2e2e;
+        display: flex;
+        align-items: center;
+        color: white;
+        position: sticky;
+        top: 0;
+    }
+
+    &__state {
         width: 58px;
         margin-right: 10px;
         margin-left: 50px;
-
     }
 
-
-   
-
-    
-
+    &__checkbox {
+        margin-right: 10px;
+    }
 }
 
-.nav{
+.nav {
     background: rgba(4, 23, 30, 0.92);
-    width: 1440px;
+    width: 100%;
     height: 104px;
 
-    &__logo{
+    &__logo {
         display: block;
         margin-left: auto;
         margin-right: auto;

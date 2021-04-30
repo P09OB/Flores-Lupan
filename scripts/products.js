@@ -9,13 +9,15 @@ db.collection('products').get().then((querySnapshot)=>{
         const data = doc.data();
         const product = document.createElement('a');
         product.innerHTML = `
+        <div class="list__product">
         <img class="list__img" src="${data.images[0]?.url || './imag/imgPlaceholder.jpeg'}">
         <div class="list__info">
             <div class="list__text">
                 <p class="list__name">${data.name}</p>
-                <p class="list__price">${data.price}</p>
+                <p class="list__price">$${data.price}</p>
             </div>
                 <input class="list__icono" type="image" src="./imag/addCart.png">
+        </div>
         </div>
         
         `;

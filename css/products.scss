@@ -2,21 +2,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap");
 
-.hiden{
-}
 body {
-    background-color: #07161B;
-    //background-color: rosybrown;
+  background-color: #07161b;
+  //background-color: rosybrown;
 }
-a{
-    text-decoration:none;
-  }
-  a:visited {color: white; text-decoration: none }
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: white;
+  text-decoration: none;
+}
 
-  ::-webkit-scrollbar {display: none;}
+::-webkit-scrollbar {
+  display: none;
+}
 
-
-@import './menu';
-@import './categories';
-@import './filter';
-@import './listStore';
+@import "./menu";
+@import "./categories";
+@import "./filter";
+@import "./listStore";

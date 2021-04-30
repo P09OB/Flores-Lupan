@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap");
 body {
-  background-color: #07161B;
+  background-color: #07161b;
 }
 
 a {
@@ -127,14 +127,69 @@ a:visited {
   border-radius: 17px 17px 17px 17px;
 }
 
+@media (max-width: 757px) {
+  .categories {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
 .filter {
   width: 100%;
   height: 10;
   color: white;
+  font-family: Poppins;
+  margin-top: 40px;
+}
+
+.filter__button {
+  font-family: Poppins;
+  margin-top: 7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 47px;
+  width: 20%px;
+  color: white;
+  cursor: pointer;
+  background-color: #07161b;
+  border: 1px solid white;
+  border-radius: 8px;
+  padding-left: 10px;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .filter__opcions {
   display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+@media (max-width: 577px) {
+  .filter__opcions {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .filter__color {
@@ -173,6 +228,12 @@ a:visited {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 23px;
 }
 
 .list__info {
@@ -185,7 +246,6 @@ a:visited {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-left: 18px;
   color: white;
 }
 
@@ -207,5 +267,10 @@ a:visited {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+}
+
+.list__product {
+  margin-right: 12px;
+  margin-left: 12px;
 }
 /*# sourceMappingURL=products.css.map */

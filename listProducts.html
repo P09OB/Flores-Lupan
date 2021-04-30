@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de productos</title>
+    <link rel="stylesheet" href="./css/admi.css">
+
+</head>
+<body>
+    <section class="nav">
+        <input class="nav__logo" type="image" src="./imag/logo.png">
+    </section>
+
+    <section class="body">
+
+        <nav class="body__nav">
+            <a class="body__nav--a" href="./addProducts.html" >Agregar productos</a>
+            <a class="body__nav--a" href="./listProducts.html">Lista de productos</a>
+        </nav>
+        <form class="listProducts">
+            <h1 class="title">Lista de productos</h1>
+            <div class="listProducts__nav">
+                <p>Producto</p>
+                <p>Precio</p>
+                <p>Categoria</p>
+                <p>Clima</p>
+                <p>Duración</p>
+                <p>Color</p>
+            </div>
+            
+            <div class="listProducts__list"></div>
+            
+
+        </form>
+    </section>
+    
+</body>
+</html>
+
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-storage.js"></script>
+<script src="./scripts/general.js"></script>
+<script src="./scripts/productsList.js"></script>
