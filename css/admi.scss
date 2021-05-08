@@ -28,7 +28,20 @@ a {
     &--a {
       margin-top: 20px;
     }
+
+    &--a:hover {
+      font-weight: bold;
+
+    }
+
+    &--select{
+      color: #CFA24F;
+      font-weight: bold;
+
+    }
+    
   }
+  
 }
 
 @import "./productForm";

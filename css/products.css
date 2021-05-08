@@ -196,18 +196,11 @@ a:visited {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 140px;
+  width: 10px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-.filter__circle {
-  height: 35px;
-  width: 35px;
-  border-radius: 50%;
-  background-color: bisque;
 }
 
 .filter__weather {
@@ -220,6 +213,20 @@ a:visited {
 .filter__img {
   height: 35px;
   width: 35px;
+}
+
+.filter__input {
+  display: block;
+  background-color: #07161b;
+  margin-top: 7px;
+  width: 299px;
+  height: 39px;
+  border: 1px solid white;
+  color: white;
+  padding-left: 10px;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .list {
@@ -272,5 +279,64 @@ a:visited {
 .list__product {
   margin-right: 12px;
   margin-left: 12px;
+}
+
+.c-checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.c-checkbox__done {
+  border: 1px solid #04171E;
+}
+
+.c-checkbox__done:before {
+  color: white;
+  content: "\2713";
+  margin-top: 6px;
+  margin-left: 10px;
+}
+
+.c-checkbox__fake {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.c-checkbox__fake--blue {
+  background-color: blue;
+}
+
+.c-checkbox__fake--yellow {
+  background-color: yellow;
+}
+
+.c-checkbox__fake--green {
+  background-color: yellowgreen;
+}
+
+.c-checkbox__fake--fuchsia {
+  background-color: fuchsia;
+}
+
+.c-checkbox__fake--red {
+  background-color: red;
+}
+
+.c-checkbox__fake--orange {
+  background-color: orange;
+}
+
+.c-checkbox--invisible {
+  opacity: 0;
+  width: 0;
 }
 /*# sourceMappingURL=products.css.map */

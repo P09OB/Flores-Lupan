@@ -65,8 +65,8 @@
         <button class="filter__button" id="filtro">Filtro y ordenamiento</button>
         <section class="filter__opcions">
             <div>
-                <h3>Ordenar</h3>
-                <select>
+                <label>Ordenar</label>
+                <select class="filter__order filter__input">
                     <option>Todos</option>
                     <option>Precio Ascendente</option>
                     <option>Precio Descendente</option>
@@ -76,37 +76,74 @@
                 </select>
             </div>
             <div>
-                <h3>Ocasión</h3>
-                <select class="filter__occasion" name="occasion">
+                <label>Ocasión</label>
+                <select class="filter__occasion filter__input" name="occasion">
                     <option>Todos</option>
                     <option>Aniversario</option>
                     <option>Condelencias</option>
                     <option>Cumpleaños</option>
                 </select>
             </div>
+
+            <section class="c-checkbox">
+                <label>Color</label>
+
+                <div>
+                    <label>
+                        <input class="c-checkbox--invisible" type="checkbox" name="color__pink">
+                        <span class="c-checkbox__fake c-checkbox__fake--yellow"></span>
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input class="c-checkbox--invisible" type="checkbox" name="color__pink">
+                        <span class="c-checkbox__fake c-checkbox__fake--yellow"></span>
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input class="c-checkbox--invisible" type="checkbox" name="color__blue">
+                        <span class="c-checkbox__fake c-checkbox__fake--blue"></span>
+                    </label>
+                </div>
+
+                <div>
+                    <label>
+                        <input class="c-checkbox--invisible" type="checkbox" name="color__green">
+                        <span class="c-checkbox__fake c-checkbox__fake--green"></span>
+                    </label>
+                </div>
+                <div>
+
+                    <label>
+                        <input class="c-checkbox--invisible" type="checkbox" name="color__fuchsia">
+                        <span class="c-checkbox__fake c-checkbox__fake--fuchsia"></span>
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input class="c-checkbox--invisible" type="checkbox" name="color__red">
+                        <span class="c-checkbox__fake c-checkbox__fake--red"></span>
+                    </label>
+                </div>
+
+                <div>
+                    <label>
+                        <input class="c-checkbox--invisible" type="checkbox" name="color__orange">
+                        <span class="c-checkbox__fake c-checkbox__fake--orange"></span>
+                    </label>
+                </div>
+            </section>
             <div>
-                <h3>Color</h3>
-                <section class='filter__color'>
-                    <div class='filter__color--none filter__circle'></div>
-                    <div class='filter__color--red filter__circle'></div>
-                    <div class='filter__color--orange filter__circle'></div>
-                    <div class='filter__color--yellow filter__circle'></div>
-                    <div class='filter__color--pink filter__circle'></div>
-                    <div class='filter__color--blue filter__circle'></div>
-                    <div class='filter__color--green filter__circle'></div>
-                    <div class='filter__color--purple filter__circle'></div>
-                </section>
-            </div>
-            <div>
-                <h3>Clima</h3>
+                <label>Clima</label>
                 <section class='filter__weather'>
                     <div>
                         <img class='filter__img' src="./imag/Snowflake.png">
-                        <p>Frio</p>
+                        <label>Frio</label>
                     </div>
                     <div>
                         <img class='filter__img' src="./imag/Sun.png">
-                        <p>Calido</p>
+                        <label>Calido</label>
                     </div>
 
                 </section>

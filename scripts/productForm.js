@@ -2,6 +2,7 @@ const productsForm = document.querySelector('.productForm');
 const productFormAdd = document.querySelector('.productForm__addAd');
 const productFormLoad = document.querySelector('.productForm__load');
 const productImages = document.querySelector('.productForm__images');
+const checkbox__fake = document.querySelector('.c-checkbox');
 const imageFiles = [];
 
 productsForm.image.addEventListener('change', () => {
@@ -90,3 +91,9 @@ productsForm.addEventListener('submit', (event) => {
     });
 
 });
+
+checkbox__fake.addEventListener('click',(ev)=>{
+    if(ev.target.tagName){
+    ev.target.classList.toggle('c-checkbox__done');
+}
+},false);

@@ -1,6 +1,20 @@
 .c-checkbox{
     display: flex;
+    flex-wrap: wrap;
     margin-top: 15px;
+
+    &__done{
+        border: 1px solid #04171E;
+
+
+    }
+
+    &__done:before{
+        color: white;
+        content: "\2713";
+        margin-top: 6px;
+        margin-left: 10px;
+    }
 
     &__fake{
         height: 35px;
@@ -14,9 +28,7 @@
         
         &--blue{
             background-color: blue;
-            &:before{
-                border: 1px solid rgb(80, 196, 27);
-            }
+            
         }
         &--yellow{
             background-color: yellow;

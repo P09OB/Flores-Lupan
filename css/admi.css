@@ -43,6 +43,15 @@ a {
   margin-top: 20px;
 }
 
+.body__nav--a:hover {
+  font-weight: bold;
+}
+
+.body__nav--select {
+  color: #CFA24F;
+  font-weight: bold;
+}
+
 .productForm {
   display: block;
   width: 852px;
@@ -222,7 +231,20 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-top: 15px;
+}
+
+.c-checkbox__done {
+  border: 1px solid #04171E;
+}
+
+.c-checkbox__done:before {
+  color: white;
+  content: "\2713";
+  margin-top: 6px;
+  margin-left: 10px;
 }
 
 .c-checkbox__fake {
@@ -237,10 +259,6 @@ a {
 
 .c-checkbox__fake--blue {
   background-color: blue;
-}
-
-.c-checkbox__fake--blue:before {
-  border: 1px solid #50c41b;
 }
 
 .c-checkbox__fake--yellow {
