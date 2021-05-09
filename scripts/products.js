@@ -1,6 +1,8 @@
 const button = document.getElementById('button');
 const filterButton = document.getElementById('filtro');
 const list = document.querySelector('.list');
+const checkbox = document.querySelector('.c-checkbox')
+const check = document.querySelector('.c-check');
 
 var clic = 1;
 
@@ -53,5 +55,25 @@ filterButton.addEventListener('click', () => {
 
     }
 
+});
 
-})
+checkbox.addEventListener('click', (ev) => {
+    console.log(ev.target.tagName);
+    console.log('entre');
+    if (ev.target.tagName === 'SPAN') {
+        ev.target.classList.toggle('c-checkbox__done');
+    }
+    if (ev.target.tagName === 'INPUT') {
+        ev.target.classList.toggle('c-checkbox__done');
+    }
+}, false);
+
+check.addEventListener('click', (e) => {
+    console.log(e.target.tagName);
+    if (e.target.tagName === 'INPUT') {
+        e.target.classList.toggle('c-checkbox__done--weather');
+    }
+    if (e.target.tagName === 'SPAN') {
+        e.target.classList.toggle('c-checkbox__done--weather');
+    }
+}, false);

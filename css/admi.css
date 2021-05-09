@@ -204,6 +204,11 @@ a {
   top: 0;
 }
 
+.productForm__wrong--text {
+  color: #ab2e2e;
+  font-size: 12px;
+}
+
 .productForm__state {
   width: 58px;
   margin-right: 10px;
@@ -237,14 +242,32 @@ a {
 }
 
 .c-checkbox__done {
-  border: 1px solid #04171E;
+  -webkit-box-shadow: inset 0 0 0 2px #04171e;
+          box-shadow: inset 0 0 0 2px #04171e;
+}
+
+.c-checkbox__done--weather {
+  background: rgba(196, 196, 196, 0.77);
+  border-radius: 25px;
+}
+
+.c-checkbox__done--weather::before {
+  color: #04171e;
+  content: "\2713";
+  margin-left: 10px;
 }
 
 .c-checkbox__done:before {
-  color: white;
+  color: #04171e;
   content: "\2713";
   margin-top: 6px;
   margin-left: 10px;
+}
+
+.c-checkbox__img {
+  height: 35px;
+  width: 35px;
+  position: absolute;
 }
 
 .c-checkbox__fake {
@@ -255,30 +278,40 @@ a {
   display: -ms-inline-flexbox;
   display: inline-flex;
   cursor: pointer;
+  -webkit-box-shadow: inset 0 0 0 1px #c4c4c4;
+          box-shadow: inset 0 0 0 1px #c4c4c4;
 }
 
-.c-checkbox__fake--blue {
-  background-color: blue;
+.c-checkbox__fake--purple {
+  background-color: #762189;
 }
 
 .c-checkbox__fake--yellow {
-  background-color: yellow;
+  background-color: #f5d04f;
 }
 
 .c-checkbox__fake--green {
-  background-color: yellowgreen;
+  background-color: #879a6f;
 }
 
 .c-checkbox__fake--fuchsia {
-  background-color: fuchsia;
+  background-color: #f05caa;
 }
 
 .c-checkbox__fake--red {
-  background-color: red;
+  background-color: #dd443e;
 }
 
 .c-checkbox__fake--orange {
-  background-color: orange;
+  background-color: #eca256;
+}
+
+.c-checkbox__fake--white {
+  background-color: white;
+}
+
+.c-checkbox__fake--nude {
+  background-color: #ecd8ce;
 }
 
 .c-checkbox--invisible {
@@ -376,5 +409,44 @@ a {
 .listProducts__img {
   width: 105px;
   height: 105px;
+}
+
+.title {
+  text-align: center;
+  color: #003548;
+  font-family: 'Merriweather', serif;
+  font-weight: bold;
+  font-size: 35px;
+  margin-bottom: 0;
+}
+
+.title--white {
+  color: white;
+}
+
+.title--nocenter {
+  text-align: start;
+}
+
+.title--padding {
+  padding-top: 80px;
+}
+
+.title--subtitle {
+  font-size: 18px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-left: 40px;
+  text-align: center;
+}
+
+.title--form {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1053px) {
+  .title {
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=admi.css.map */

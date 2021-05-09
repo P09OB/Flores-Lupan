@@ -3,6 +3,8 @@ const productFormAdd = document.querySelector('.productForm__addAd');
 const productFormLoad = document.querySelector('.productForm__load');
 const productImages = document.querySelector('.productForm__images');
 const checkbox__fake = document.querySelector('.c-checkbox');
+const productFormError = document.querySelector('.productForm__wrong');
+const productFormErrorText = document.querySelector('.productForm__wrong--text');
 const imageFiles = [];
 
 productsForm.image.addEventListener('change', () => {
@@ -29,7 +31,7 @@ productsForm.addEventListener('submit', (event) => {
         type: productsForm.type.value,
         weather: productsForm.weather.value,
         occasion: [],
-        duration: productsForm.duration.value,
+        duration: parseFloat(productsForm.duration.value),
         color: [],
         description: productsForm.description.value,
         score: 0,
@@ -39,15 +41,60 @@ productsForm.addEventListener('submit', (event) => {
     if (productsForm.occasion_birthday.checked) product.occasion.push('birthday');
     if (productsForm.occasion_condolences.checked) product.occasion.push('condolences');
 
-    if (productsForm.color__pink.checked) product.color.push('pink');
-    if (productsForm.color__blue.checked) product.color.push('blue');
+    if (productsForm.color__yellow.checked) product.color.push('yellow');
+    if (productsForm.color__purple.checked) product.color.push('purple');
     if (productsForm.color__green.checked) product.color.push('green');
     if (productsForm.color__fuchsia.checked) product.color.push('fuchsia');
     if (productsForm.color__red.checked) product.color.push('red');
     if (productsForm.color__orange.checked) product.color.push('orange');
+    if (productsForm.color__white.checked) product.color.push('white');
+    if (productsForm.color__nude.checked) product.color.push('nude');
 
-    console.log(product);
-    console.log(productsForm.color__pink.checked)
+     
+    let error = '';
+    if (!product.name) {
+        error += "Falta el nombre del producto. <br/>";
+    }
+    if (!product.price) {
+        error += "Indique el precio del producto. <br/>";
+    }
+    if (!product.type) {
+        error += "Indique el tipo de producto. <br/>";
+    }
+    if (!product.weather) {
+        error += "Indique el clima ideal para el producto. <br/>";
+    }
+    if (!product.occasion) {
+        error += "Indique una ocasión. <br/>";
+    }
+    if (!product.description) {
+        error += "Agrege una descripción. <br/>";
+    }
+    if (!product.duration) {
+        error += "Indique la duración del producto <br/>";
+    }
+    if (product.duration > 31) {
+        error += "La duración del producto no puede ser mayor a 31 días <br/>";
+    }
+    if (product.color.length === 0) {
+        error += "Seleccione un color. <br/>";
+    }
+    if (error) {
+        productFormErrorText.innerHTML = error;
+        productFormError.classList.remove('hidden');
+        return;
+    } else {
+        productFormError.classList.add('hidden');
+    }
+
+    productFormLoad.classList.remove('hidden');
+    productFormError.classList.add('hidden');
+
+    const genericCatch = function (error) {
+        productFormLoad.classList.add('hidden');
+        productFormError.classList.remove('hidden');
+        productFormError.innerHTML = 'There was an error in the product upload.';
+    }
 
     db.collection('products').add(product).then((docRef) => {
         const uploadPromises = [];
@@ -84,16 +131,24 @@ productsForm.addEventListener('submit', (event) => {
                     //MENSAJE DE QUE YA TERMINO
                     productFormLoad.classList.add('hidden');
                     productFormAdd.classList.remove('hidden');
+                    productFormErrorText.innerHTML = '';
+                    document.getElementById("name").value = "";
+                    document.getElementById("price").value = "";
+                    document.getElementById("duration").value = "";
+                    document.getElementById('description').value ="";
                 })
-
-            });
-        });
-    });
+                    .catch(genericCatch);
+            })
+                .catch(genericCatch);
+        })
+            .catch(genericCatch);
+    })
+        .catch(genericCatch);
 
 });
 
-checkbox__fake.addEventListener('click',(ev)=>{
-    if(ev.target.tagName){
-    ev.target.classList.toggle('c-checkbox__done');
-}
-},false);
+checkbox__fake.addEventListener('click', (ev) => {
+    if (ev.target.tagName === 'SPAN') {
+        ev.target.classList.toggle('c-checkbox__done');
+    }
+}, false);

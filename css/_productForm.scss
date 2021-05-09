@@ -118,6 +118,11 @@
         color: white;
         position: sticky;
         top: 0;
+
+        &--text{
+            color: #ab2e2e;
+            font-size: 12px;
+        }
     }
 
     &__state {

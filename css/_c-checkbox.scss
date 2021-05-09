@@ -1,60 +1,74 @@
-.c-checkbox{
+.c-checkbox {
     display: flex;
     flex-wrap: wrap;
     margin-top: 15px;
 
-    &__done{
-        border: 1px solid #04171E;
+    &__done {
+        box-shadow: inset 0 0 0 2px #04171e;
+        &--weather {
+            background: rgba(196, 196, 196, 0.77);
+            border-radius: 25px;
 
+        }
 
+        &--weather::before{
+        color: #04171e;
+        content: "\2713";
+        margin-left: 10px;
+
+        }
     }
 
-    &__done:before{
-        color: white;
+    &__done:before {
+        color: #04171e;
         content: "\2713";
         margin-top: 6px;
         margin-left: 10px;
+
     }
 
-    &__fake{
+    &__img{
+        height: 35px;
+        width: 35px;
+        position: absolute;
+    }
+
+    &__fake {
         height: 35px;
         width: 35px;
         border-radius: 50%;
         display: inline-flex;
         cursor: pointer;
+        box-shadow: inset 0 0 0 1px #c4c4c4;
 
-
-        
-        
-        &--blue{
-            background-color: blue;
-            
+        &--purple {
+            background-color: #762189;
         }
-        &--yellow{
-            background-color: yellow;
+        &--yellow {
+            background-color: #f5d04f;
         }
-        &--green{
-            background-color: yellowgreen;
+        &--green {
+            background-color: #879a6f;
         }
-        &--fuchsia{
-            background-color: fuchsia;
+        &--fuchsia {
+            background-color: #f05caa;
         }
-        &--red{
-            background-color: red;
+        &--red {
+            background-color: #dd443e;
         }
-        &--orange{
-            background-color: orange;
+        &--orange {
+            background-color: #eca256;
         }
-
-        
+        &--white {
+            background-color: white;
+        }
+        &--nude {
+            background-color: #ecd8ce;
+        }
     }
 
-    &--invisible{
-
+    &--invisible {
         opacity: 0;
         width: 0;
-
     }
-
-    
 }

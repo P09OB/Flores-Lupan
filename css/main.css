@@ -743,6 +743,10 @@ p {
   text-align: center;
 }
 
+.title--form {
+  margin-bottom: 20px;
+}
+
 @media (max-width: 1053px) {
   .title {
     text-align: center;

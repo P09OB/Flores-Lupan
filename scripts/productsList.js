@@ -18,6 +18,8 @@ db.collection('products').get().then((querySnapshot)=>{
         product.classList.add('product');
         product.setAttribute('href','#');
         list.appendChild(product);
+
     });
 
-})
+});
+

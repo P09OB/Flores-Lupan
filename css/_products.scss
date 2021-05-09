@@ -11,18 +11,13 @@
         box-sizing: border-box;
         flex-wrap: wrap;
         height: 100%;
-
-    
     }
 
     &__contents{
-
         padding-top: 50px;
-
     }
 
     &__price{
-
         display: flex;
         width: 97%;
         justify-content: space-between;
@@ -30,12 +25,9 @@
         font-weight: bold;
         font-size: 15px;
         padding-top: 17px;
-
-
     }
 
     &__info{
-
         display:inline-block;
         position:relative;
         width: 313px;
@@ -43,8 +35,6 @@
         &--img:hover{
             opacity: 0.10;
             transition: opacity 500ms;
-        
-    
         }
     }
 
