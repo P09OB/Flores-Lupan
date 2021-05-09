@@ -37,36 +37,36 @@
 
     </nav>
 
-    <section class="categories">
-        <div class="categories__all">
-            <img class="categories__img" src='./imag/categoria1.jpg'>
+    <form class="categories">
+        <div class="categories__all all" >
+            <img class="categories__img " src='./imag/categoria1.jpg'>
             <p>Todo</p>
         </div>
-        <div class="categories__all">
-            <img class="categories__img" src='./imag/categoria2.jpg'>
+        <div class="categories__all conventional">
+            <img class="categories__img " src='./imag/categoria2.jpg'>
             <p>Convencionales</p>
         </div>
-        <div class="categories__all">
-            <img class="categories__img" src='./imag/categoria3.jpeg'>
+        <div class="categories__all exclusive">
+            <img class="categories__img " src='./imag/categoria3.jpeg'>
             <p>Exclusivas</p>
         </div>
-        <div class="categories__all">
-            <img class="categories__img" src='./imag/categoria4.png'>
+        <div class="categories__all exotic">
+            <img class="categories__img " src='./imag/categoria4.png'>
             <p>Exoticas</p>
         </div>
-        <div class="categories__all">
-            <img class="categories__img" src='./imag/categoria5.png'>
+        <div class="categories__all foliage">
+            <img class="categories__img " src='./imag/categoria5.png'>
             <p>Follaje</p>
         </div>
 
-    </section>
+    </form>
 
     <section class="filter">
         <button class="filter__button" id="filtro">Filtro y ordenamiento</button>
         <section class="filter__opcions">
             <div>
-                <label>Ordenar</label>
-                <select class="filter__order filter__input">
+                <label for="order">Ordenar</label>
+                <select id="order" class="filter__order filter__input">
                     <option>Todos</option>
                     <option>Precio Ascendente</option>
                     <option>Precio Descendente</option>
@@ -76,8 +76,8 @@
                 </select>
             </div>
             <div>
-                <label>Ocasión</label>
-                <select class="filter__occasion filter__input" name="occasion">
+                <label for="occasion">Ocasión</label>
+                <select id="occasion" class="filter__occasion filter__input" name="occasion">
                     <option>Todos</option>
                     <option>Aniversario</option>
                     <option>Condelencias</option>

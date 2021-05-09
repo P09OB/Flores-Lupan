@@ -53,6 +53,7 @@ p {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  cursor: pointer;
 }
 
 .menu__responsive {
@@ -61,6 +62,7 @@ p {
 
 .menu--icono {
   margin-right: 20px;
+  cursor: pointer;
 }
 
 @media (max-width: 766px) {

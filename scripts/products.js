@@ -3,11 +3,19 @@ const filterButton = document.getElementById('filtro');
 const list = document.querySelector('.list');
 const checkbox = document.querySelector('.c-checkbox')
 const check = document.querySelector('.c-check');
+const select = document.querySelector('.categories__all');
+const conventional = document.querySelector('.conventional');
+const exclusive = document.querySelector('.exclusive');
+const exotic = document.querySelector('.exotic');
+const foliage = document.querySelector('.foliage');
+const all = document.querySelector('.all');
+
 
 var clic = 1;
 
-db.collection('products').get().then((querySnapshot)=>{
-    querySnapshot.forEach((doc)=>{
+const handleCollectionResult = (querySnapshot) => {
+    list.innerHTML = '';
+    querySnapshot.forEach((doc) => {
         const data = doc.data();
         const product = document.createElement('a');
         product.innerHTML = `
@@ -24,12 +32,37 @@ db.collection('products').get().then((querySnapshot)=>{
         
         `;
         product.classList.add('product');
-        product.setAttribute('href','#');
+        product.setAttribute('href', '#');
 
         list.appendChild(product);
     });
+};
 
-})
+conventional.addEventListener('click', () => {
+    filterType('conventional');
+});
+exclusive.addEventListener('click', () => {
+    filterType('exclusive');
+    
+});
+exotic.addEventListener('click', () => {
+    filterType('exotic');
+});
+foliage.addEventListener('click', () => {
+    filterType('foliage');
+});
+all.addEventListener('click', () => {
+    filterType('');
+});
+
+function filterType(type) {
+
+    let productCollection = db.collection('products')
+    if (type) productCollection = productCollection.where('type', '==', type)
+    productCollection.get().then(handleCollectionResult)
+
+}
+db.collection('products').get().then(handleCollectionResult)
 
 button.addEventListener('click', () => {
 
@@ -44,11 +77,11 @@ button.addEventListener('click', () => {
 
 filterButton.addEventListener('click', () => {
 
-    if(clic==1){
+    if (clic == 1) {
         document.querySelector('.filter__opcions').style.display = 'none';
-        clic= clic + 1;
+        clic = clic + 1;
 
-    } else{
+    } else {
         document.querySelector('.filter__opcions').style.display = 'flex';
         document.querySelector('.filter__opcions').style.flexWrap = 'wrap';
         clic = 1;

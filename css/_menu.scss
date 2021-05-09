@@ -14,12 +14,15 @@
     z-index:10;
 
 
+
     width: 100%;
 
     &__element:hover{
 
         color: #CFA24F;
         justify-content: space-evenly; 
+        cursor: pointer;
+
     }
 
     &__responsive{
@@ -29,6 +32,8 @@
 
     &--icono{
         margin-right: 20px;
+        cursor: pointer;
+
     }
 
     @media (max-width: 766px) {

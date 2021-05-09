@@ -50,7 +50,7 @@ productsForm.addEventListener('submit', (event) => {
     if (productsForm.color__white.checked) product.color.push('white');
     if (productsForm.color__nude.checked) product.color.push('nude');
 
-     
+
     let error = '';
     if (!product.name) {
         error += "Falta el nombre del producto. <br/>";
@@ -135,7 +135,7 @@ productsForm.addEventListener('submit', (event) => {
                     document.getElementById("name").value = "";
                     document.getElementById("price").value = "";
                     document.getElementById("duration").value = "";
-                    document.getElementById('description').value ="";
+                    document.getElementById('description').value = "";
                 })
                     .catch(genericCatch);
             })
