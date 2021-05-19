@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/details.css">
+
+</head>
+
+<body>
+
+    <nav class="menu">
+        <div class="menu__responsive">
+            <img src="./imag/menu.png" id="button" class="menu__button">
+            <img class="menu__logo--size" src="./imag/logo-41w.png">
+            <div class="menu__icono--responsive">
+                <a><img class="menu--icono" src="./imag/ShoppingCart.png"></a>
+                <a><img class="menu--icono" src="./imag/User.png"></a>
+            </div>
+        </div>
+
+        <a class="menu__element menu__desaparecer" href="./index.html">Inicio</a>
+        <a class="menu__element menu__desaparecer" href="./products.html">Flores</a>
+        <a class="menu__element menu__desaparecer">Ramos</a>
+        <a class="menu__logo"> <img src="./imag/logo.png"></a>
+        <a class="menu__element menu__desaparecer">Galería</a>
+        <a class="menu__element menu__desaparecer"> Contáctenos</a>
+        <div class="menu__icono">
+            <a><img class="menu--icono" src="./imag/ShoppingCart.png">
+            </a><a><img class="menu--icono" src="./imag/User.png">
+            </a>
+        </div>
+
+
+    </nav>
+
+    <section class="details">
+
+        <div class="details__info">
+            
+        <div class="details__img">
+            <img class="details__img--big" src="">
+            <div class="details__img--scrooll">
+                <img class="details__img1 details__img--small" src="">
+                <img class="details__img2 details__img--small" src="">
+                <img class="details__img3 details__img--small" src="">
+            </div>
+        </div>
+
+        <div class="details__text">
+            <h1 class="details__text--title"></h1>
+            <div class="details__text--div">
+                <h4 class="details__text--score"></h4><img class="details__text--img" src="./imag/Star.png">
+            </div>
+            <h3 class="details__text--price"></h3>
+            <p class="details__text--description"></p>
+            <p class="details__label" >Especificaciones:</p>
+
+            <div class="details__info--details">
+                <section class="details__weather">
+                    <div>Clima</div>
+                    <div class="details__weather--info details__weather--cold hidden">
+                        <img class="details__weather--img" src="./imag/Snowflake2.png">
+                        <div class="details__weather--text">Frio</div>
+
+                    </div>
+                    <div class="details__weather--info details__weather--hot hidden">
+                        <img class="details__weather--img" src="./imag/Sun2.png">
+                        <div class="details__weather--text">Calido</div>
+                    </div>
+                </section>
+
+                <section class="details__weather--info details__duration">
+                    <div>Duración</div>
+                    <p class=" details__duration--days"></p>
+                    <div class="details__weather--text details__weather--day">Días</div>
+                </section>
+
+            </div>
+
+            <p class="details__label">Selecciona un color</p>
+            <section class="c-checkbox">
+                <div>
+                    <label>
+                        <input class="c-checkbox--invisible" type="checkbox" name="color__yellow">
+                        <span class="c-checkbox__fake c-checkbox__fake--yellow hidden"></span>
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input class="c-checkbox--invisible" type="checkbox" name="color__purple">
+                        <span class="c-checkbox__fake c-checkbox__fake--purple hidden"></span>
+                    </label>
+                </div>
+
+                <div>
+                    <label>
+                        <input class="c-checkbox--invisible" type="checkbox" name="color__green">
+                        <span class="c-checkbox__fake c-checkbox__fake--green hidden"></span>
+                    </label>
+                </div>
+                <div>
+
+                    <label>
+                        <input class="c-checkbox--invisible" type="checkbox" name="color__fuchsia">
+                        <span class="c-checkbox__fake c-checkbox__fake--fuchsia hidden"></span>
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input class="c-checkbox--invisible" type="checkbox" name="color__red">
+                        <span class="c-checkbox__fake c-checkbox__fake--red hidden"></span>
+                    </label>
+                </div>
+
+                <div>
+                    <label>
+                        <input class="c-checkbox--invisible" type="checkbox" name="color__orange">
+                        <span class="c-checkbox__fake c-checkbox__fake--orange hidden"></span>
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input class="c-checkbox--invisible" type="checkbox" name="color__white">
+                        <span class="c-checkbox__fake c-checkbox__fake--white hidden"></span>
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input class="c-checkbox--invisible" type="checkbox" name="color__nude">
+                        <span class="c-checkbox__fake c-checkbox__fake--nude hidden"></span>
+                    </label>
+                </div>
+            </section>
+            <p class="details__label" >Cantidad</p>
+            <section class="details__flex">
+                <input class="productForm__input productForm__input--duration " type="number" placeholder="0">
+                <button class="details__flex--button">Agregar al carrito</button>
+            </section>
+
+
+        </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
+
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-storage.js"></script>
+<script src="./scripts/general.js"></script>
+<script src="./scripts/infoProduct.js"></script>

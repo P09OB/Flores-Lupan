@@ -30,9 +30,9 @@ productsForm.addEventListener('submit', (event) => {
         price: parseFloat(productsForm.price.value),
         type: productsForm.type.value,
         weather: productsForm.weather.value,
-        occasion: [],
+        occasion:[],
         duration: parseFloat(productsForm.duration.value),
-        color: [],
+        color:[],
         description: productsForm.description.value,
         score: 0,
     }
@@ -41,14 +41,14 @@ productsForm.addEventListener('submit', (event) => {
     if (productsForm.occasion_birthday.checked) product.occasion.push('birthday');
     if (productsForm.occasion_condolences.checked) product.occasion.push('condolences');
 
-    if (productsForm.color__yellow.checked) product.color.push('yellow');
-    if (productsForm.color__purple.checked) product.color.push('purple');
-    if (productsForm.color__green.checked) product.color.push('green');
-    if (productsForm.color__fuchsia.checked) product.color.push('fuchsia');
-    if (productsForm.color__red.checked) product.color.push('red');
-    if (productsForm.color__orange.checked) product.color.push('orange');
-    if (productsForm.color__white.checked) product.color.push('white');
-    if (productsForm.color__nude.checked) product.color.push('nude');
+    if (productsForm.color__yellow.checked) product.color.push("yellow");
+    if (productsForm.color__purple.checked) product.color.push("purple");
+    if (productsForm.color__green.checked) product.color.push("green");
+    if (productsForm.color__fuchsia.checked) product.color.push("fuchsia");
+    if (productsForm.color__red.checked) product.color.push("red");
+    if (productsForm.color__orange.checked) product.color.push("orange");
+    if (productsForm.color__white.checked) product.color.push("white");
+    if (productsForm.color__nude.checked) product.color.push("nude");
 
 
     let error = '';

@@ -6,6 +6,7 @@ const bouquetStatis = document.querySelector('.statis');
 const interaction = document.querySelector('.interaction__bouquet');
 let selectStatis, selectMargaritas, selectSunflower, selectAstromelia;
 
+
 bouquetStatis.addEventListener('click', () => {
 
     selectStatis = true;
