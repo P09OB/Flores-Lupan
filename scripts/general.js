@@ -10,15 +10,22 @@ firebase.initializeApp(firebaseConfig);
 
 const db = firebase.firestore();
 const storage = firebase.storage();
-
+let loggedUser = null;
 firebase.auth().onAuthStateChanged((user) => {
     if (user) {
-      // User is signed in, see docs for a list of available properties
-      // https://firebase.google.com/docs/reference/js/firebase.User
-      var uid = user.uid;
+      db.collection('users').doc(user.uid).get().then((doc)=>{
+        loggedUser = doc.data();
+        loggedUser.uid = user.uid;
+        
+
+        userAuthChanged(true);
+
+      })
       // ...
     } else {
-      // User is signed out
-      // ...
+      loggedUser = null;
+      console.log("cerrar sesion");
+
+      userAuthChanged(false);
     }
   });

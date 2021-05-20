@@ -13,6 +13,7 @@ db.collection('products').get().then((querySnapshot)=>{
                 <p class="listProducts__Weather">${data.weather}</p>
                 <p class="listProducts__Duration">${data.duration}</p>
                 <p class="listProducts__Color">${data.color}</p>
+                <button class="">X</button>
         <div>
         `;
         product.classList.add('product');

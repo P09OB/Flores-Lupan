@@ -6,36 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
+
     <link rel="stylesheet" href="./css/products.css">
+
 
 </head>
 
 <body class="bodyProducts">
 
-    <nav class="menu">
-        <div class="menu__responsive">
-            <img src="./imag/menu.png" id="button" class="menu__button">
-            <img class="menu__logo--size" src="./imag/logo-41w.png">
-            <div class="menu__icono--responsive">
-                <a><img class="menu--icono" src="./imag/ShoppingCart.png"></a>
-                <a><img class="menu--icono" src="./imag/User.png"></a>
-            </div>
-        </div>
-
-        <a class="menu__element menu__desaparecer" href="./index.html">Inicio</a>
-        <a class="menu__element menu__desaparecer">Flores</a>
-        <a class="menu__element menu__desaparecer">Ramos</a>
-        <a class="menu__logo"> <img src="./imag/logo.png"></a>
-        <a class="menu__element menu__desaparecer">Galería</a>
-        <a class="menu__element menu__desaparecer"> Contáctenos</a>
-        <div class="menu__icono">
-            <a><img class="menu--icono" src="./imag/ShoppingCart.png">
-            </a><a><img class="menu--icono" src="./imag/User.png">
-            </a>
-        </div>
-
-
-    </nav>
+    <nav class="menu"></nav>
 
     <form class="categories">
         
@@ -63,7 +42,10 @@
     </form>
 
     <form class="filter" >
-        <button type="reset" class="filter__button" id="filtro">Filtro y ordenamiento</button>
+        <div class="filter__change">
+        <button type="button" class="filter__button" id="filtro">Filtro y ordenamiento</button>
+        <a href="./listProducts.html" class="filter__button filter__button--a hidden showLoggedAdmi">Editar</a>
+    </div>
         <section class="filter__opcions">
             <div>
                 <label for="order">Ordenar</label>
@@ -174,6 +156,8 @@
 <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-storage.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
-
+<script src="scripts/navModal.js"></script>
+<script src="./scripts/authUtils.js"></script>
+<script src="./scripts/authModal.js"></script>
 <script src="./scripts/general.js"></script>
 <script src="./scripts/products.js"></script>

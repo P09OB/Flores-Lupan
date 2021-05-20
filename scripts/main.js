@@ -1,4 +1,3 @@
-const button = document.getElementById('button');
 const bouquetSunflower = document.querySelector('.sunflower');
 const bouquetAstromelia = document.querySelector('.astromelia');
 const bouquetMargaritas = document.querySelector('.margaritas');
@@ -99,13 +98,5 @@ var flkty = new Flickity('.main-gallery', {
     contain: true
 });
 
-button.addEventListener('click', () => {
 
-    const ancla = document.getElementsByClassName('menu__element');
-    for (var i = 0; i < ancla.length; i++) {
 
-        ancla[i].classList.toggle('menu__desaparecer');
-
-    }
-
-})

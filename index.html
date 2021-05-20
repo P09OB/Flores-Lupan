@@ -12,30 +12,7 @@
 
 <body>
 
-    <nav class="menu">
-        <div class="menu__responsive">
-            <img src="./imag/menu.png" id="button" class="menu__button">
-            <img class="menu__logo--size" src="./imag/logo-41w.png">
-            <div class="menu__icono--responsive">
-                <a><img class="menu--icono" src="./imag/ShoppingCart.png"></a>
-                <a><img class="menu--icono" src="./imag/User.png"></a>
-            </div>
-        </div>
-
-        <a class="menu__element menu__desaparecer">Inicio</a>
-        <a class="menu__element menu__desaparecer"  href="./products.html">Flores</a>
-        <a class="menu__element menu__desaparecer">Ramos</a>
-        <a class="menu__logo"> <img src="./imag/logo.png"></a>
-        <a class="menu__element menu__desaparecer">Galería</a>
-        <a class="menu__element menu__desaparecer"> Contáctenos</a>
-        <div class="menu__icono">
-            <a><img class="menu--icono" src="./imag/ShoppingCart.png">
-            </a><a><img class="menu--icono" src="./imag/User.png">
-            </a>
-        </div>
-
-
-    </nav>
+    <nav class="menu"></nav>
 
     <section class="banner">
         <h1 class="banner__title">Flores frescas</h1>
@@ -205,25 +182,24 @@
 
         <div class="interaction__opcion">
 
-        <div class="interaction__base">  
-            <h3 class="title--subtitle">Selecciona una base</h3>
+            <div class="interaction__base">
+                <h3 class="title--subtitle">Selecciona una base</h3>
 
-            <img class= "interaction__photo1 sunflower" src="./imag/opcion4.jpg">
-            <img class="interaction__photo1 astromelia" src="./imag/opcion1.jpg">
+                <img class="interaction__photo1 sunflower" src="./imag/opcion4.jpg">
+                <img class="interaction__photo1 astromelia" src="./imag/opcion1.jpg">
+
+            </div>
+
+            <div class="interaction__follaje">
+                <h3 class="title--subtitle">Selecciona un follaje</h3>
+
+                <img class="interaction__photo1 margaritas" src="./imag/opcion2.jpg">
+                <img class="interaction__photo1 statis" src="./imag/opcion3.jpg">
+            </div>
 
         </div>
-
-        <div class="interaction__follaje">
-        <h3 class="title--subtitle">Selecciona un follaje</h3>
-            
-            <img class="interaction__photo1 margaritas" src="./imag/opcion2.jpg">
-            <img class="interaction__photo1 statis" src="./imag/opcion3.jpg">
-        </div>
-
-        </div>  
 
     </section>
-
     <section class="gallery">
 
         <h1 class="title title--white">Galería</h1>
@@ -240,7 +216,7 @@
     <section class="newsletter">
 
         <div class="newsletter__img"></div>
-        
+
         <div class="newsletter__input">
 
             <h1 class="title title--nocenter">Boletín y ofertas</h1>
@@ -289,7 +265,9 @@
 <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-storage.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
-
 <script src="./path/to/flickity.pkgd.min.js"></script>
+<script src="scripts/navModal.js"></script>
+<script src="./scripts/authUtils.js"></script>
+<script src="./scripts/authModal.js"></script>
 <script src="./scripts/general.js"></script>
 <script src="./scripts/main.js"></script>

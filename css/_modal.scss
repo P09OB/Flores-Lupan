@@ -1,0 +1,49 @@
+.modal {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  display: none;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+  color: white;
+
+  &__backdrop {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  &__content {
+    padding: 90px 50px 60px 530px;
+    box-sizing: border-box;
+    background-image: url("../imag/imgLogin.jpg");
+    background-repeat: no-repeat;
+    margin: 10% auto;
+    width: 100%;
+    max-width: 954px;
+    max-height: 608px;
+    transition: transform 0.5s ease;
+    transform: translate(0px, -500px);
+    position: relative;
+  }
+
+  &__close {
+    position: absolute;
+    width: 22px;
+    top: 15px;
+    right: 15px;
+  }
+
+  &__close:hover{
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2px;
+    box-sizing: border-box;
+    border-radius: 8px;
+  }
+}

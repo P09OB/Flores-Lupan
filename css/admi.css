@@ -57,13 +57,46 @@ a {
   width: 852px;
   padding-bottom: 20px;
   padding-top: 20px;
-  color: #182A30;
+  color: #182a30;
   border: 1px solid #000000;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 16px;
   padding-left: 49px;
   font-family: Poppins;
+}
+
+.productForm__button {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.productForm__auth {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.productForm__auth--img {
+  width: 140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.productForm__auth--text {
+  text-align: center;
+  padding-top: 25px;
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+}
+
+.productForm__auth--link:hover {
+  cursor: pointer;
+  color: #CFA24F;
 }
 
 .productForm__group {
@@ -84,6 +117,12 @@ a {
   margin-top: 8px;
 }
 
+.productForm__label--auth {
+  margin-top: 20px;
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+}
+
 .productForm__input {
   display: block;
   margin-top: 7px;
@@ -94,6 +133,13 @@ a {
   border-radius: 4px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.productForm__input--auth {
+  background-color: bisque;
+  background: rgba(255, 255, 255, 0.7);
+  width: 100%;
+  border-radius: 16px;
 }
 
 .productForm__input--price {

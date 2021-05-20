@@ -3,12 +3,40 @@
     width: 852px;
     padding-bottom: 20px;
     padding-top: 20px;
-    color: #182A30;
+    color: #182a30;
     border: 1px solid #000000;
     box-sizing: border-box;
     border-radius: 16px;
     padding-left: 49px;
     font-family: Poppins;
+
+    &__button {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__auth {
+        display: flex;
+        flex-direction: column;
+        &--img {
+            width: 140px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &--text {
+            text-align: center;
+            padding-top: 25px;
+            font-family: "Raleway", sans-serif;
+            font-size: 15px;
+        }
+        &--link:hover{
+        cursor: pointer;
+        color: #CFA24F;;
+
+
+        }
+    }
 
     &__group {
         display: flex;
@@ -22,6 +50,11 @@
         &--checkbox {
             margin-top: 8px;
         }
+        &--auth {
+            margin-top: 20px;
+            font-family: "Raleway", sans-serif;
+            font-size: 15px;
+        }
     }
 
     &__input {
@@ -34,6 +67,12 @@
         border-radius: 4px;
         box-sizing: border-box;
 
+        &--auth {
+            background-color: bisque;
+            background: rgba(255, 255, 255, 0.7);
+            width: 100%;
+            border-radius: 16px;
+        }
 
         &--price {
             background-image: url("../imag/CurrencyDollar.png");
@@ -119,7 +158,7 @@
         position: sticky;
         top: 0;
 
-        &--text{
+        &--text {
             color: #ab2e2e;
             font-size: 12px;
         }

@@ -7,6 +7,7 @@ const productFormError = document.querySelector('.productForm__wrong');
 const productFormErrorText = document.querySelector('.productForm__wrong--text');
 const imageFiles = [];
 
+
 productsForm.image.addEventListener('change', () => {
     const file = productsForm.image.files[0];
     if (!file) return;
