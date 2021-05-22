@@ -227,7 +227,7 @@ a:visited {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 199px;
+  width: 180px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -ms-flex-wrap: wrap;

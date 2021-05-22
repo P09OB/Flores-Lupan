@@ -6,7 +6,11 @@ const checkbox__fake = document.querySelector('.c-checkbox');
 const productFormError = document.querySelector('.productForm__wrong');
 const productFormErrorText = document.querySelector('.productForm__wrong--text');
 const imageFiles = [];
+var numScore;
 
+function getRandomArbitrary(min, max) {
+    numScore =  Math.random() * (max - min) + min;
+  }
 
 productsForm.image.addEventListener('change', () => {
     const file = productsForm.image.files[0];
@@ -25,7 +29,10 @@ productsForm.image.addEventListener('change', () => {
 
 productsForm.addEventListener('submit', (event) => {
     event.preventDefault();
-
+    getRandomArbitrary(0, 10)
+    console.log(numScore);
+    var score = numScore.toFixed(2);
+    
     const product = {
         name: productsForm.name.value,
         price: parseFloat(productsForm.price.value),
@@ -35,7 +42,7 @@ productsForm.addEventListener('submit', (event) => {
         duration: parseFloat(productsForm.duration.value),
         color:[],
         description: productsForm.description.value,
-        score: 0,
+        score: score,
     }
 
     if (productsForm.occasion_anniversary.checked) product.occasion.push('anniversary');

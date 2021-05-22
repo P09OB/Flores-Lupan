@@ -38,7 +38,7 @@ const handleCollectionResult = (querySnapshot) => {
             </div>
         </div>
         </a>
-        <input class="list__cartBtn list__icono" type="image" src="./imag/addCart.png">
+        <input class="list__cartBtn list__icono authButtons__login" type="image" src="./imag/addCart.png">
 
         </div>
         `;
@@ -46,16 +46,30 @@ const handleCollectionResult = (querySnapshot) => {
         list.appendChild(product);
 
         const cartBtn = product.querySelector('.list__cartBtn ');
-        cartBtn.addEventListener('click',()=>{
-            addToMyCart({
-                ...data,
-                id:doc.id,
-            });
-            
-            //localStorage.setItem('store__cart',JSON.stringify(cart));
-            //span(cart.length);
+            cartBtn.addEventListener('click',()=>{
 
-        })
+                if(loggedUser){
+
+                    addToMyCart({
+                        ...data,
+                        id:doc.id,
+                        amount:1,
+                        color:[],
+                        total: data.price,
+                    });
+
+                } else{
+                    authModal.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                    setTimeout(handleModalAppear, 1);
+                }
+            
+                
+
+            });
+        
+            /*localStorage.setItem('store__cart',JSON.stringify(cart));
+            span(cart.length);*/
     });
 };
 

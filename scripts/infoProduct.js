@@ -25,6 +25,8 @@ const colorNude = document.querySelector('.c-checkbox__fake--nude');
 const weatherCold = document.querySelector('.details__weather--cold');
 const weatherHot = document.querySelector('.details__weather--hot');
 const productDuration = document.querySelector('.details__duration--days');
+const formDetails =document.querySelector('.details__form');
+const addButton = document.querySelector('.details__addCart');
 
 
 
@@ -90,6 +92,39 @@ db.collection('products').doc(id).get().then((doc) => {
         if (data.color[i] === 'nude') remove(colorNude);
     };
 
+    formDetails.addEventListener('submit',(event)=>{
+        event.preventDefault();
+
+        const color = [];
+        
+        if(loggedUser){
+        if (formDetails.color__yellow.checked) color.push("yellow");
+        if (formDetails.color__purple.checked) color.push("purple");
+        if (formDetails.color__green.checked) color.push("green");
+        if (formDetails.color__fuchsia.checked) color.push("fuchsia");
+        if (formDetails.color__red.checked) color.push("red");
+        if (formDetails.color__orange.checked) color.push("orange");
+        if (formDetails.color__white.checked) color.push("white");
+        if (formDetails.color__nude.checked) color.push("nude");
+    
+            addToMyCart({
+                ...data,
+                id:doc.id,
+                amount:formDetails.amount.value,
+                color:color,
+                total: data.price*formDetails.amount.value,
+            });
+
+            
+    
+        } else{
+            authModal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            setTimeout(handleModalAppear, 1);
+        }
+    
+    })
+
 });
 
 function remove(color) {
@@ -104,3 +139,5 @@ checkbox.addEventListener('click', (ev) => {
         ev.target.classList.toggle('c-checkbox__done');
     }
 }, false);
+
+

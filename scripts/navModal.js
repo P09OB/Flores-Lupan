@@ -33,8 +33,6 @@ const button = document.getElementById('button');
 function span(number){
     const cartNumber = document.querySelector('.cartBtn span');
     cartNumber.innerText = number;
-    console.log(cartNumber);
-
 }
 
 button.addEventListener('click', () => {
