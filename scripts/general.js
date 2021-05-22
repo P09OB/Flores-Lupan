@@ -11,21 +11,72 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 const storage = firebase.storage();
 let loggedUser = null;
+
+const setLoggedUser = (info,id)=>{
+  loggedUser = info;
+  loggedUser.uid = id;
+  userAuthChanged(true);
+  if(typeof checkProductFormAdmin !== 'undefined') checkProductFormAdmin();
+
+
+}
 firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       db.collection('users').doc(user.uid).get().then((doc)=>{
-        loggedUser = doc.data();
-        loggedUser.uid = user.uid;
+        if(!doc.data())return;
+        setLoggedUser(doc.data(), user.uid);
         
 
-        userAuthChanged(true);
-
-      })
-      // ...
+      });
+      getMyCart(user.uid);
     } else {
       loggedUser = null;
-      console.log("cerrar sesion");
-
+      cart = [];
+      span(cart.length);
       userAuthChanged(false);
     }
   });
+
+let cart = [];
+
+//FIREBASE 
+const CartCollection = db.collection('cart');
+const orderCollection = db.collection('orders');
+
+const addToMyCart =(product)=>{
+    cart.push(product);
+    CartCollection.doc(loggedUser.uid).set({
+      cart:cart,
+    })
+    span(cart.length);
+
+}
+
+let renderCart = null;
+
+const getMyCart = (uid) =>{
+
+  CartCollection.doc(uid).get().then((snapShot)=>{
+    const data = snapShot.data();
+    if(!data) return;
+    span(data.cart.length);
+    cart = data.cart;
+
+    
+     if(renderCart) renderCart();
+
+    
+  });
+
+}
+
+
+
+/*
+const cartFromLS = localStorage.getItem('store__cart');
+
+if(cartFromLS){
+    cart = JSON.parse(cartFromLS);
+    span(cart.length);
+
+}*/

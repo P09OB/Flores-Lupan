@@ -153,3 +153,10 @@ checkbox__fake.addEventListener('click', (ev) => {
         ev.target.classList.toggle('c-checkbox__done');
     }
 }, false);
+
+const checkProductFormAdmin = ()=>{
+
+    if(!loggedUser || !loggedUser.admin){
+        location.href = './products.html';
+    }
+}

@@ -19,7 +19,7 @@ nav.innerHTML=`
         <a class="menu__element menu__desaparecer">Galería</a>
         <a class="menu__element menu__desaparecer"> Contáctenos</a>
         <div class="menu__icono">
-            <a><img class="menu--icono" src="./imag/ShoppingCart.png">
+            <a class="cartBtn" href="./cart.html" ><img class=" menu--icono" src="./imag/ShoppingCart.png"><span></span>
             </a>
             <section class="authButtons"></section>
             </a>
@@ -29,6 +29,13 @@ nav.innerHTML=`
 `;
 
 const button = document.getElementById('button');
+
+function span(number){
+    const cartNumber = document.querySelector('.cartBtn span');
+    cartNumber.innerText = number;
+    console.log(cartNumber);
+
+}
 
 button.addEventListener('click', () => {
 

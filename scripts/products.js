@@ -12,7 +12,6 @@ const all = document.querySelector('.all');
 const cold = document.querySelector('.cold');
 const hot = document.querySelector('.hot');
 
-
 var clic = 1;
 var clic1 = 1;
 var clic2 = 1;
@@ -31,19 +30,32 @@ const handleCollectionResult = (querySnapshot) => {
         product.innerHTML = `
         <a class="product" href="./infoProduct.html?id=${doc.id}&name=${data.name}">
         <div class="list__product">
-        <img class="list__img" src="${data.images[0]?.url || './imag/imgPlaceholder.jpeg'}">
+        <img class="list__img" src="${data.images[0]?.url || './imag/imgPlaceholder.jpeg'}">   
         <div class="list__info">
             <div class="list__text">
                 <p class="list__name">${data.name}</p>
                 <p class="list__price">$${data.price}</p>
             </div>
-                <input class="list__icono" type="image" src="./imag/addCart.png">
-        </div>
         </div>
         </a>
+        <input class="list__cartBtn list__icono" type="image" src="./imag/addCart.png">
+
+        </div>
         `;
         
         list.appendChild(product);
+
+        const cartBtn = product.querySelector('.list__cartBtn ');
+        cartBtn.addEventListener('click',()=>{
+            addToMyCart({
+                ...data,
+                id:doc.id,
+            });
+            
+            //localStorage.setItem('store__cart',JSON.stringify(cart));
+            //span(cart.length);
+
+        })
     });
 };
 

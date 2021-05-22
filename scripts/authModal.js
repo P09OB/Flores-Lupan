@@ -106,12 +106,16 @@ autoForm.addEventListener('submit', (event) => {
             var user = userCredential.user;
             console.log(user);
 
-            db.collection('users').doc(user.uid).set({
+            const userDoc ={
                 admi: false,
                 name,
                 email: email,
                 password: password,
-            })
+
+            }
+
+            db.collection('users').doc(user.uid).set(userDoc)
+            setLoggedUser(userDoc,user.uid)
             handleCloseModal();
             
         })

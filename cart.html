@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="./css/admi.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+
+
+</head>
+
+<body>
+    <nav class="menu"></nav>
+
+    <main class="checkout">
+        <section class="cartList"></section>
+        <section class="checkout__summary">
+            <h3 class="checkout__total">Total: $<span></span></h3>
+            <button class="checkout__boton"></button>
+        </section>
+        <form class="checkout__form">
+            <label for="addres">Dirección
+                <input type="text" id="addres" name="addres">
+            </label>
+            <label  for="cinumber">Número de cedula
+                <input type="number" id="cinumber" name="cinumber">
+            </label>
+            <label for="ccnumber">Número de la tarjeta
+                <input type="number" id="ccnumber" name="ccnumber">
+
+            </label>
+            <button type="submit" class="checkout__boton">SEND</button>
+
+        </form>
+
+    </main>
+
+</body>
+
+</html>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+
+<script src="scripts/navModal.js"></script>
+<script src="./scripts/authUtils.js"></script>
+<script src="./scripts/authModal.js"></script>
+<script src="./scripts/general.js"></script>
+<script src="./scripts/cart.js"></script>

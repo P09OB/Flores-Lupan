@@ -22,13 +22,19 @@ function userAuthChanged(loggedIn){
 
  })
 
- const showLoggedAdmin= document.querySelector('.showLoggedAdmi');
+ const showLoggedAdmin= document.querySelectorAll('.showLoggedAdmi');
 
-    if(loggedIn && loggedUser.admi){
-        showLoggedAdmin.classList.remove('hidden');
+ showLoggedAdmin.forEach((elem)=>{
+    if(loggedIn && loggedUser.admin){
+        console.log(showLoggedAdmin)
+        console.log(loggedUser.admin);
+        elem.classList.remove('hidden');
     } else {
-        showLoggedAdmin.classList.add('hidden');
+        elem.classList.add('hidden');
 
     }
+     
+ })
+    
 
 }
