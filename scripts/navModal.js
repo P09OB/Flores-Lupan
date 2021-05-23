@@ -6,8 +6,10 @@ nav.innerHTML=`
             <img src="./imag/menu.png" id="button" class="menu__button">
             <img class="menu__logo--size" src="./imag/logo-41w.png">
             <div class="menu__icono--responsive">
-                <a><img class="menu--icono" src="./imag/ShoppingCart.png"></a>
-                <a><img class="menu--icono" src="./imag/User.png"></a>
+                <a class="cartBtn" href="./cart.html"><img class="menu--icono"  src="./imag/ShoppingCart.png"><span>0</span></a>
+                <section class="authButtons"></section>
+
+                
             </div>
 
         </div>
@@ -19,10 +21,8 @@ nav.innerHTML=`
         <a class="menu__element menu__desaparecer">Galería</a>
         <a class="menu__element menu__desaparecer"> Contáctenos</a>
         <div class="menu__icono">
-            <a class="cartBtn" href="./cart.html" ><img class=" menu--icono" src="./imag/ShoppingCart.png"><span></span>
-            </a>
+            <a class="cartBtn" href="./cart.html" ><img class=" menu--icono" src="./imag/ShoppingCart.png"><span>0</span></a>
             <section class="authButtons"></section>
-            </a>
             <div class="showLoggedAdmi hidden"></div>
 
         </div>

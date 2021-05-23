@@ -1,102 +1,104 @@
 .menu {
-  background-color: #04171E;
+    background-color: #04171e;
     color: white;
     display: flex;
     position: sticky;
     top: 0;
-    justify-content: space-evenly;   
+    justify-content: space-evenly;
     align-items: center;
     padding-top: 24px;
-    padding-bottom: 20px;  
-    font-family: 'Raleway', sans-serif;
+    padding-bottom: 20px;
+    font-family: "Raleway", sans-serif;
     font-weight: 500;
     font-size: 16px;
-    z-index:10;
-
-
+    z-index: 10;
 
     width: 100%;
 
-    &__element:hover{
-
-        color: #CFA24F;
-        justify-content: space-evenly; 
+    &__element:hover {
+        color: #cfa24f;
+        justify-content: space-evenly;
         cursor: pointer;
-
     }
 
-    &__responsive{
+    &__responsive {
         display: none;
     }
 
+    &__icono{
+        display: flex;
+    }
 
-    &--icono{
+    &--icono {
         margin-right: 20px;
         cursor: pointer;
-
     }
 
     @media (max-width: 766px) {
-
         flex-direction: column;
         align-items: flex-start;
-        
 
-        &__responsive{
+        &__responsive {
             display: flex;
             justify-content: space-between;
             width: 100%;
-
         }
-        &__desaparecer{
-
+        &__desaparecer {
             display: none;
-
         }
 
-        &__logo{
+        &__logo {
             display: none;
-            &--size{
+            &--size {
                 padding-left: 27px;
             }
         }
-        
-        &__element{
+
+        &__element {
             padding: 20px;
         }
 
-        &__icono{
+        &__icono {
             display: none;
-        
+
+            &--responsive{
+                display: flex;
+            }
         }
 
-        &--icono{
+        &--icono {
             margin-right: 15px;
             box-sizing: border-box;
         }
 
-        &__button{
+        &__button {
             padding-left: 20px;
         }
-
-        
-
-
-        
-        
     }
-
-
-
-
-
-
- 
-
-
-
-
 }
 
+.cartBtn span {
+    background-color: white;
+    position: absolute;
+    color: #003548;
+    font-weight: 600;
+    font-size: 14px;
+    width: 17px;
+    height: 17px;
+    transform: translateX(-30px);
+    text-align: center;
+    border-radius: 8px;
+}
 
-  
+.authButtons{
+    display: flex;
+    align-items: center;
+
+    font-size: 12px;
+
+    &__logout:hover{
+        color:  #CFA24F;
+
+    }
+}
+

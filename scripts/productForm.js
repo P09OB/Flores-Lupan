@@ -181,3 +181,4 @@ const checkProductFormAdmin = ()=>{
         location.href = './products.html';
     }
 }
+

@@ -24,6 +24,8 @@ firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     db.collection('users').doc(user.uid).get().then((doc) => {
       if (!doc.data()) return;
+      const data = doc.data();
+    
       setLoggedUser(doc.data(), user.uid);
 
 
@@ -34,6 +36,7 @@ firebase.auth().onAuthStateChanged((user) => {
     cart = [];
     span(cart.length);
     userAuthChanged(false);
+
   }
 });
 

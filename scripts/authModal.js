@@ -44,6 +44,7 @@ const regBttn = autoForm.querySelector('.autoform__regbutton');
 const logbutton = autoForm.querySelector('.autoform__logbutton');
 const errorForm = autoForm.querySelector('.productForm__error');
 let isLogin = true;
+let nameUser;
 const authModalContent = document.querySelector('.modal__content');
 const modalClose = document.querySelector('.modal__close');
 
@@ -82,87 +83,102 @@ handleGoToLogin();
 
 autoForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    
+
     const name = autoForm.name.value;
     const email = autoForm.email.value;
     const password = autoForm.password.value;
 
-    
-    if(isLogin){
 
-        firebase.auth().signInWithEmailAndPassword(email,password)
-        .then(()=>{
-            handleCloseModal();
-        })
-        .catch((error)=>{
-            console.log(error);
-            errorForm.innerHTML=error;
+    if (isLogin) {
 
-        });
+        firebase.auth().signInWithEmailAndPassword(email, password)
+            .then(() => {
+                handleCloseModal();
+            })
+            .catch((error) => {
+                console.log(error);
+                errorForm.innerHTML = error;
 
-    } else{
-        firebase.auth().createUserWithEmailAndPassword(email,password)
-        .then((userCredential)=>{
-            var user = userCredential.user;
-            console.log(user);
+            });
 
-            const userDoc ={
-                admi: false,
-                name,
-                email: email,
-                password: password,
+    } else {
+        firebase.auth().createUserWithEmailAndPassword(email, password)
+            .then((userCredential) => {
+                var user = userCredential.user;
+                console.log(user);
 
-            }
+                const userDoc = {
+                    admi: false,
+                    name,
+                    email: email,
+                    password: password,
 
-            db.collection('users').doc(user.uid).set(userDoc)
-            setLoggedUser(userDoc,user.uid)
-            handleCloseModal();
-            
-        })
-        .catch((error)=>{
-            errorForm.innerHTML=error;
+                }
+
+                db.collection('users').doc(user.uid).set(userDoc)
+                setLoggedUser(userDoc, user.uid)
+                handleCloseModal();
+
+            })
+            .catch((error) => {
+                errorForm.innerHTML = error;
 
 
-        });
+            });
     }
 
 });
 
-const authButtons = document.querySelector('.authButtons');
-authButtons.innerHTML = `
-<button class="authButtons__logout hidden showLoggedIn" >Cerrar Sesión </button>
+
+const authButtons = document.querySelectorAll('.authButtons');
+
+authButtons.forEach((elem) => {
+    elem.innerHTML = `
+<a class="authButtons__logout hidden showLoggedIn" >Cerrar Sesión </a>
 <a class="authButtons__login btn bnt-open-modal hidden showLogin"><img class="menu--icono" src="./imag/User.png">
 
 
 `;
-const authLogin  = document.querySelector('.authButtons__login');
-const authLogOut = document.querySelector('.authButtons__logout');
-
-function handleModalAppear () {
-    authModal.style.opacity = 1;
-    authModalContent.style.transform = 'translate(0px, 0px)';
-  }
-
-authLogin.addEventListener('click',()=>{
-    authModal.style.display = 'block';
-  document.body.style.overflow = 'hidden';
-  setTimeout(handleModalAppear, 1);
 
 })
 
-function handleCloseModal () {
+const authLogin = document.querySelectorAll('.authButtons__login');
+const authLogOut = document.querySelectorAll('.authButtons__logout');
+
+function handleModalAppear() {
+    authModal.style.opacity = 1;
+    authModalContent.style.transform = 'translate(0px, 0px)';
+}
+
+authLogin.forEach((elem) => {
+
+    elem.addEventListener('click', () => {
+        authModal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+        setTimeout(handleModalAppear, 1);
+    })
+
+})
+
+function handleCloseModal() {
     authModal.style.opacity = 0;
     authModalContent.style.transform = 'translate(0px, -500px)';
     document.body.style.overflow = 'hidden scroll';
     setTimeout(function () {
         authModal.style.display = 'none';
     }, 500);
-  }
+}
 
-authLogOut.addEventListener('click',()=>{
+authLogOut.forEach((elem) => {
 
-    firebase.auth().signOut();
-})
+    elem.addEventListener('click', () => {
+
+        firebase.auth().signOut();
+    })
+
+});
+
+
 
 modalClose.addEventListener('click', handleCloseModal);
 

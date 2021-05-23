@@ -6,7 +6,7 @@
 }
 
 .menu {
-  background-color: #04171E;
+  background-color: #04171e;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22,7 +22,7 @@
           align-items: center;
   padding-top: 24px;
   padding-bottom: 20px;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-size: 16px;
   z-index: 10;
@@ -30,7 +30,7 @@
 }
 
 .menu__element:hover {
-  color: #CFA24F;
+  color: #cfa24f;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -39,6 +39,12 @@
 
 .menu__responsive {
   display: none;
+}
+
+.menu__icono {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .menu--icono {
@@ -80,6 +86,11 @@
   .menu__icono {
     display: none;
   }
+  .menu__icono--responsive {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .menu--icono {
     margin-right: 15px;
     -webkit-box-sizing: border-box;
@@ -88,6 +99,34 @@
   .menu__button {
     padding-left: 20px;
   }
+}
+
+.cartBtn span {
+  background-color: white;
+  position: absolute;
+  color: #003548;
+  font-weight: 600;
+  font-size: 14px;
+  width: 17px;
+  height: 17px;
+  -webkit-transform: translateX(-30px);
+          transform: translateX(-30px);
+  text-align: center;
+  border-radius: 8px;
+}
+
+.authButtons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 12px;
+}
+
+.authButtons__logout:hover {
+  color: #CFA24F;
 }
 
 .details {

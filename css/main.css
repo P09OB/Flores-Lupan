@@ -29,7 +29,7 @@ p {
 }
 
 .menu {
-  background-color: #04171E;
+  background-color: #04171e;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -45,7 +45,7 @@ p {
           align-items: center;
   padding-top: 24px;
   padding-bottom: 20px;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-size: 16px;
   z-index: 10;
@@ -53,7 +53,7 @@ p {
 }
 
 .menu__element:hover {
-  color: #CFA24F;
+  color: #cfa24f;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -62,6 +62,12 @@ p {
 
 .menu__responsive {
   display: none;
+}
+
+.menu__icono {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .menu--icono {
@@ -103,6 +109,11 @@ p {
   .menu__icono {
     display: none;
   }
+  .menu__icono--responsive {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .menu--icono {
     margin-right: 15px;
     -webkit-box-sizing: border-box;
@@ -111,6 +122,34 @@ p {
   .menu__button {
     padding-left: 20px;
   }
+}
+
+.cartBtn span {
+  background-color: white;
+  position: absolute;
+  color: #003548;
+  font-weight: 600;
+  font-size: 14px;
+  width: 17px;
+  height: 17px;
+  -webkit-transform: translateX(-30px);
+          transform: translateX(-30px);
+  text-align: center;
+  border-radius: 8px;
+}
+
+.authButtons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 12px;
+}
+
+.authButtons__logout:hover {
+  color: #CFA24F;
 }
 
 .banner {
@@ -650,6 +689,12 @@ p {
   }
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
 .modal {
   position: fixed;
   left: 0px;
@@ -705,6 +750,18 @@ p {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 8px;
+}
+
+@media (max-width: 989px) {
+  .modal {
+    padding: 0;
+  }
+  .modal__content {
+    padding: 90px 5% 60px 5%;
+    margin: 23% 0%;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
 }
 
 .productForm {
