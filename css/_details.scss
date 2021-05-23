@@ -183,3 +183,42 @@
         
     }
 }
+
+.featuredProducts{
+
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: center;
+    margin-top: 23px;
+
+    &__list {
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+        color: white;
+    }
+
+    &__icono {
+        width: 41px;
+        height: 41px;
+    }
+
+    &__img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 328px;
+        height: 455px;
+    }
+
+    @media (max-width: 414px) {
+        flex-wrap: wrap;
+    }
+
+    &__product {
+        margin-right: 12px;
+        margin-left: 12px;
+    }
+}

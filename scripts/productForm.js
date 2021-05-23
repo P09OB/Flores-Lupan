@@ -5,12 +5,13 @@ const productImages = document.querySelector('.productForm__images');
 const checkbox__fake = document.querySelector('.c-checkbox');
 const productFormError = document.querySelector('.productForm__wrong');
 const productFormErrorText = document.querySelector('.productForm__wrong--text');
-const imageFiles = [];
+let imageFiles = [];
 var numScore;
 
 function getRandomArbitrary(min, max) {
     numScore =  Math.random() * (max - min) + min;
   }
+
 
 productsForm.image.addEventListener('change', () => {
     const file = productsForm.image.files[0];
@@ -28,6 +29,7 @@ productsForm.image.addEventListener('change', () => {
 });
 
 productsForm.addEventListener('submit', (event) => {
+
     event.preventDefault();
     getRandomArbitrary(0, 10)
     console.log(numScore);
@@ -42,7 +44,7 @@ productsForm.addEventListener('submit', (event) => {
         duration: parseFloat(productsForm.duration.value),
         color:[],
         description: productsForm.description.value,
-        score: score,
+        score: parseFloat(score),
     }
 
     if (productsForm.occasion_anniversary.checked) product.occasion.push('anniversary');
@@ -86,6 +88,9 @@ productsForm.addEventListener('submit', (event) => {
     }
     if (product.color.length === 0) {
         error += "Seleccione un color. <br/>";
+    }
+    if(imageFiles.length <= 3){
+        error += "Agrege cuatro imagenes como minimo. <br/>";
     }
     if (error) {
         productFormErrorText.innerHTML = error;
@@ -139,21 +144,30 @@ productsForm.addEventListener('submit', (event) => {
                     //MENSAJE DE QUE YA TERMINO
                     productFormLoad.classList.add('hidden');
                     productFormAdd.classList.remove('hidden');
+                    setTimeout(adAppear, 2000);
                     productFormErrorText.innerHTML = '';
                     document.getElementById("name").value = "";
                     document.getElementById("price").value = "";
                     document.getElementById("duration").value = "";
                     document.getElementById('description').value = "";
+                    productImages.innerHTML='';
+                    imageFiles=[];
+
                 })
-                    .catch(genericCatch);
+                .catch(genericCatch);
             })
                 .catch(genericCatch);
         })
             .catch(genericCatch);
     })
         .catch(genericCatch);
-
+        
 });
+
+function adAppear(){
+    productFormAdd.classList.add('hidden');
+
+}
 
 checkbox__fake.addEventListener('click', (ev) => {
     if (ev.target.tagName === 'SPAN') {

@@ -188,10 +188,7 @@ function filterType(search, type) {
     productCollection.get().then(handleCollectionResult)
 
 }
-
 db.collection('products').get().then(handleCollectionResult)
-
-
 
 filterButton.addEventListener('click', () => {
 

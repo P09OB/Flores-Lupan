@@ -27,13 +27,11 @@ const weatherHot = document.querySelector('.details__weather--hot');
 const productDuration = document.querySelector('.details__duration--days');
 const formDetails =document.querySelector('.details__form');
 const addButton = document.querySelector('.details__addCart');
-
-
-
-
+const listFeatured = document.querySelector('.featuredProducts__list');
 const productDescripction = document.querySelector('.details__text--description');
 
 
+;
 
 db.collection('products').doc(id).get().then((doc) => {
 
@@ -81,7 +79,9 @@ db.collection('products').doc(id).get().then((doc) => {
 
     }
 
-    for (let i = 0; i < 7; i++) {
+    console.log(data.color);
+
+    for (let i = 0; i < data.color.length; i++) {
         if (data.color[i] === 'yellow') remove(colorYellow);
         if (data.color[i] === 'purple') remove(colorPurple);
         if (data.color[i] === 'green') remove(colorGreen);
@@ -126,6 +126,63 @@ db.collection('products').doc(id).get().then((doc) => {
     })
 
 });
+
+const resultFeatured = (querySnapshot) => {
+    listFeatured.innerHTML = '';
+
+    querySnapshot.forEach((doc) => {
+        const data = doc.data();
+        const product = document.createElement('div');
+        product.innerHTML = `
+        <a class="product" href="./infoProduct.html?id=${doc.id}&name=${data.name}">
+        <div class="featuredProducts__product">
+        <img class="featuredProducts__img" src="${data.images[0]?.url || './imag/imgPlaceholder.jpeg'}">   
+        <div class="featuredProducts__info">
+            <div class="featuredProducts__text">
+                <p class="featuredProducts__name">${data.name}</p>
+                <p class="featuredProducts__price">$${data.price}</p>
+            </div>
+        </div>
+        </a>
+        <input class="featuredProducts__cartBtn featuredProducts__icono authButtons__login" type="image" src="./imag/addCart.png">
+
+        </div>
+        `;
+        
+        listFeatured.appendChild(product);
+
+        /*const cartBtn = product.querySelector('.list__cartBtn ');
+            cartBtn.addEventListener('click',()=>{
+
+                if(loggedUser){
+
+                    addToMyCart({
+                        ...data,
+                        id:doc.id,
+                        amount:1,
+                        color:[],
+                        total: data.price,
+                    });
+
+                } else{
+                    authModal.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                    setTimeout(handleModalAppear, 1);
+                }
+            
+                
+
+            });*/
+        
+            /*localStorage.setItem('store__cart',JSON.stringify(cart));
+            span(cart.length);*/
+    });
+    
+};
+
+let productCollection = db.collection('products');
+productCollection = productCollection.where("score", ">", 9).orderBy("score").limit(4);
+productCollection.get().then(resultFeatured);
 
 function remove(color) {
     color.classList.remove('hidden');
