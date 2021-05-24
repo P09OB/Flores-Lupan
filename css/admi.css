@@ -449,7 +449,7 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-top: 1px solid #182A30;
+  border-top: 1px solid #b6b5b5;
 }
 
 .listProducts__img {
