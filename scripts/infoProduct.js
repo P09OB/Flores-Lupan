@@ -137,21 +137,24 @@ const resultFeatured = (querySnapshot) => {
         <a class="product" href="./infoProduct.html?id=${doc.id}&name=${data.name}">
         <div class="featuredProducts__product">
         <img class="featuredProducts__img" src="${data.images[0]?.url || './imag/imgPlaceholder.jpeg'}">   
+        </a>
+        <div class="featuredProducts__details">
         <div class="featuredProducts__info">
             <div class="featuredProducts__text">
-                <p class="featuredProducts__name">${data.name}</p>
+            <p class="featuredProducts__name"><b>${data.name}</b><br><img class="featuredProducts__img--little" src="./imag/Star.png">${data.score}</p>
                 <p class="featuredProducts__price">$${data.price}</p>
             </div>
         </div>
-        </a>
-        <input class="featuredProducts__cartBtn featuredProducts__icono authButtons__login" type="image" src="./imag/addCart.png">
+        
+        <input class="list__cartBtn featuredProducts__cartBtn featuredProducts__icono authButtons__login" type="image" src="./imag/addCart.png">
+        </div>
 
         </div>
         `;
         
         listFeatured.appendChild(product);
 
-        /*const cartBtn = product.querySelector('.list__cartBtn ');
+        const cartBtn = product.querySelector('.list__cartBtn');
             cartBtn.addEventListener('click',()=>{
 
                 if(loggedUser){
@@ -172,7 +175,7 @@ const resultFeatured = (querySnapshot) => {
             
                 
 
-            });*/
+            });
         
             /*localStorage.setItem('store__cart',JSON.stringify(cart));
             span(cart.length);*/
@@ -181,7 +184,7 @@ const resultFeatured = (querySnapshot) => {
 };
 
 let productCollection = db.collection('products');
-productCollection = productCollection.where("score", ">", 9).orderBy("score").limit(4);
+productCollection = productCollection.where("score", ">", 8).orderBy("score").limit(4);
 productCollection.get().then(resultFeatured);
 
 function remove(color) {

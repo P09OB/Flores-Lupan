@@ -8,14 +8,14 @@ db.collection('products').onSnapshot((querySnapshot) => {
         product.innerHTML = `
         <div class="listProducts__list--product">
                 <img class="listProducts__img" src="${data.images[0]?.url || './imag/imgPlaceholder.jpeg'}">
-                <p class="listProducts__Name">${data.name}</p>
-                <p class="listProducts__Price" >$${data.price}</p>
-                <p class="listProducts__Categories">${data.type}</p>
-                <p class="listProducts__Weather">${data.weather}</p>
-                <p class="listProducts__Duration">${data.duration}</p>
-                <p class="listProducts__Color">${data.color}</p>
-                <a class="listProducts__edit" href="./editProduct.html?id=${doc.id}&name=${data.name}"<span>Estoy</span>>
-                <button class="listProducts__delete">X</button>
+                <p class="listProducts__Name"><b>Producto:</b> ${data.name}</p>
+                <p class="listProducts__Price"><b>Precio:</b>  $${data.price}</p>
+                <p class="listProducts__Categories"><b>Tipo:</b> ${data.type}</p>
+                <div class="listProducts__btn">
+                <a class="listProducts__edit" href="./editProduct.html?id=${doc.id}&name=${data.name}"> <img class="listProducts__edit--img"  src="./imag/edit.png"> </a>
+                <input class="listProducts__delete" type="image" src="./imag/Xbluepng.png">
+                </div>
+
         <div>
         `;
 

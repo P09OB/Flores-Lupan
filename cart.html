@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito</title>
-    <link rel="stylesheet" href="./css/admi.css">
     <link rel="stylesheet" href="./css/main.css">
 
 
@@ -15,27 +14,38 @@
 
 <body>
     <nav class="menu"></nav>
+    <h1 class="title checkout__title">Carrito de compras</h1>
 
     <main class="checkout">
-        <section class="cartList"></section>
-        <section class="checkout__summary">
-            <h3 class="checkout__total">Total: $<span></span></h3>
-            <button class="checkout__boton"></button>
-        </section>
-        <form class="checkout__form">
-            <label for="addres">Dirección
-                <input type="text" id="addres" name="addres">
-            </label>
-            <label  for="cinumber">Número de cedula
-                <input type="number" id="cinumber" name="cinumber">
-            </label>
-            <label for="ccnumber">Número de la tarjeta
-                <input type="number" id="ccnumber" name="ccnumber">
 
-            </label>
-            <button type="submit" class="checkout__boton">SEND</button>
+        <section class="checkout__summary">
+            <h1>Resumen de tu orden</h1>
+            <h4 class="checkout__total">Valor del pedido: <span></span></h4>
+            <h4 class="checkout__total checkout__total--text">Entrega: <span>$5000</span></h4>
+            <h4 class="checkout__total--final">Total: <span></span></h4>
+
+            <button type="button" class="button checkout__boton">Ir a comprar</button>
+        </section>
+
+        <section class="cartList"></section>
+
+        <form class="checkout__form hidden">
+            <label class="form__label" for="addres">Dirección</label>
+            <input class="form__input" type="text" id="addres" name="addres">
+
+            <label  class="form__label"  for="cinumber">Número de cedula</label>
+            <input class="form__input" type="number" id="cinumber" name="cinumber">
+
+            <label class="form__label"  for="ccnumber">Número de la tarjeta</label>  
+            <input class="form__input" type="number" id="ccnumber" name="ccnumber">
+
+            <button type="submit" class="button checkout__boton">Comprar</button>
 
         </form>
+
+        
+
+        
 
     </main>
 

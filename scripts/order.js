@@ -7,8 +7,11 @@ db.collection('orders').get().then((querySnapshot)=>{
         const product = document.createElement('div');
         product.innerHTML = `
         <div class="listProducts__list--product">
-                <p class="listProducts__Name">${data.addres}</p>
-                <p class="listProducts__Price" >$${data.ccnumber}</p>
+        <div>
+                <p class="listProducts__date">${new Date(data.data).toDateString()}</p>
+                <p class="listProducts__Name"><b>Dirección:</b> ${data.addres}</p>
+        </div>
+                <p class="listProducts__Price"><b>Total:</b>  $${data.total}</p>
         <div>
         `;
         const listOrder = document.createElement('div');
@@ -16,5 +19,5 @@ db.collection('orders').get().then((querySnapshot)=>{
         list.appendChild(product);
 
     });
-
+    
 });

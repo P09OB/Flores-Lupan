@@ -42,4 +42,22 @@
 
     }
 
+    &__delete{
+        width: 17px;
+        height: 17px;
+        margin-left: 15px;
+        
+    }
+    &__edit{
+        &--img{
+            width: 18px;
+        height: 18px;
+        }
+    }
+    &__date{
+        font-size: 12px;
+
+    }
+    
+
 }

@@ -31,8 +31,13 @@ nav.innerHTML=`
 const button = document.getElementById('button');
 
 function span(number){
-    const cartNumber = document.querySelector('.cartBtn span');
-    cartNumber.innerText = number;
+    const cartNumber = document.querySelectorAll('.cartBtn span');
+    cartNumber.forEach((elem)=>{
+        elem.innerText = ""+number;
+        console.log(cartNumber);
+    })
+    
+
 }
 
 button.addEventListener('click', () => {

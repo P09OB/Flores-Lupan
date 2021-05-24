@@ -457,6 +457,21 @@ a {
   height: 105px;
 }
 
+.listProducts__delete {
+  width: 17px;
+  height: 17px;
+  margin-left: 15px;
+}
+
+.listProducts__edit--img {
+  width: 18px;
+  height: 18px;
+}
+
+.listProducts__date {
+  font-size: 12px;
+}
+
 .title {
   text-align: center;
   color: #003548;
@@ -488,6 +503,11 @@ a {
 
 .title--form {
   margin-bottom: 20px;
+}
+
+.title--admi {
+  font-size: 24px;
+  margin-left: 20px;
 }
 
 @media (max-width: 1053px) {

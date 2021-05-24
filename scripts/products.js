@@ -31,15 +31,17 @@ const handleCollectionResult = (querySnapshot) => {
         <a class="product" href="./infoProduct.html?id=${doc.id}&name=${data.name}">
         <div class="list__product">
         <img class="list__img" src="${data.images[0]?.url || './imag/imgPlaceholder.jpeg'}">   
+        </a>
+        <div class="list__details">
         <div class="list__info">
             <div class="list__text">
-                <p class="list__name">${data.name}</p>
+                <p class="list__name"><b>${data.name}</b><img class="list__img--little" src="./imag/startWhite.png">${data.score}</p>
                 <p class="list__price">$${data.price}</p>
             </div>
         </div>
-        </a>
+        
         <input class="list__cartBtn list__icono authButtons__login" type="image" src="./imag/addCart.png">
-
+        </div>
         </div>
         `;
         

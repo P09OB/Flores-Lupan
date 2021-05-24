@@ -1,25 +1,43 @@
 
 const list = document.querySelector('.cartList');
 const totalSpan = document.querySelector('.checkout__total span');
-const checkForm = document.querySelector('.checkout__form');
-let total = 0;
-let cart2 = [];
+const totalFinalSpan = document.querySelector('.checkout__total--final span');
 
+const checkForm = document.querySelector('.checkout__form');
+const buttonHidden = document.querySelector('.checkout__boton');
+const form = document.querySelector('.checkout__form');
+let total = 0;
+let totalFinal = 0;
+
+buttonHidden.addEventListener('click',()=>{
+
+    form.classList.remove('hidden')
+    list.classList.add('hidden')
+    buttonHidden.classList.add('hidden');
+    console.log('entre');
+
+
+
+});
 
 renderCart = () => {
+
+    if(cart.length < 0){
+        list.innerText = "Tu Carrito de Compras está vacío :(";
+
+    }
 
     cart.forEach((data) => {
         const product = document.createElement('div');
         product.innerHTML = `
-        <div class="listProducts__list--product">
-                <img class="listProducts__img" src="${data.images[0]?.url || './imag/imgPlaceholder.jpeg'}">
+        <div class="cartList__list">
+                <img class="cartList__img" src="${data.images[0]?.url || './imag/imgPlaceholder.jpeg'}">
+                <div class="cartList__details">
+                <p class="">${data.type}</p>
                 <p class="listProducts__Name">${data.name}</p>
+                </div>
                 <p class="listProducts__Price" >$${data.price}</p>
-                <p class="listProducts__Categories">${data.type}</p>
-                <p class="listProducts__Weather">${data.weather}</p>
-                <p class="listProducts__Duration">${data.duration}</p>
-                <p class="listProducts__Color">${data.color}</p>
-                <button class="delete">X</button>
+                
         <div>
         `;
         
@@ -29,7 +47,7 @@ renderCart = () => {
 
 
 
-        const productDelete = product.querySelector('.delete');
+        /*const productDelete = product.querySelector('.delete');
 
         productDelete.addEventListener('click', (event) => {
             console.log(data.id);
@@ -46,17 +64,19 @@ renderCart = () => {
                 if(cart2.id === data.id){
                     cart2.splice(cart2.id);
 
-                }*/
+                }
             });
 
 
 
 
-        });
+        });*/
 
 
     });
-    totalSpan.innerText = total;
+    totalSpan.innerText = "$ "+total;
+    totalFinal = total+5000;
+    totalFinalSpan.innerText = "$ "+totalFinal;
 
     checkForm.addEventListener('submit', (event)=>{
         event.preventDefault();
@@ -93,4 +113,6 @@ renderCart = () => {
 
 
 }
+
+
 

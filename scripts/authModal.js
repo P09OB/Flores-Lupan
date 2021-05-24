@@ -108,11 +108,8 @@ autoForm.addEventListener('submit', (event) => {
                 console.log(user);
 
                 const userDoc = {
-                    admi: false,
                     name,
                     email: email,
-                    password: password,
-
                 }
 
                 db.collection('users').doc(user.uid).set(userDoc)
