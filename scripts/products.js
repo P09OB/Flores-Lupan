@@ -107,22 +107,22 @@ filter.addEventListener('change', function () {
 
         switch (filter.order.value) {
             case 'price_asc':
-                productCollection = productCollection.orderBy('price', 'asc');
-                break;
-            case 'price_des':
                 productCollection = productCollection.orderBy('price', 'desc');
                 break;
-            case 'duration_asc':
-                productCollection = productCollection.orderBy('duration', 'asc');
+            case 'price_des':
+                productCollection = productCollection.orderBy('price', 'asc');
                 break;
-            case 'duration_des':
+            case 'duration_asc':
                 productCollection = productCollection.orderBy('duration', 'desc');
                 break;
+            case 'duration_des':
+                productCollection = productCollection.orderBy('duration', 'asc');
+                break;
             case 'score_asc':
-                productCollection = productCollection.orderBy('score', 'asc');
+                productCollection = productCollection.orderBy('score', 'desc');
                 break;
             case 'score_des':
-                productCollection = productCollection.orderBy('score', 'desc');
+                productCollection = productCollection.orderBy('score', 'asc');
                 break;
 
         }
