@@ -91,7 +91,7 @@ filter.addEventListener('change', function () {
 
     if(arrayColor.length > 0){
         
-        productCollection = productCollection.where('color', 'in', arrayColor);
+        productCollection = productCollection.where('color', 'array-contains-any', arrayColor);
     }
 
     if(filter.occasion.value){
